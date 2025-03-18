@@ -4,8 +4,8 @@ import Header from "./component/header";
 export default function Home() {
   return (
     <>
-      <div className="bg-[#00050d] h-screen">
-        <div className="">
+      <div className="">
+        <div className="bg-[#00050d]">
           <Header />
           <div className="text-white md:p-20 p-4">
             <div>
@@ -23,7 +23,8 @@ export default function Home() {
                       Mov video member? Sign in
                     </button>
                     <div className="flex items-center gap-6">
-                      <hr className="border-t border-white md:w-28 w-36" /> <p>or</p>
+                      <hr className="border-t border-white md:w-28 w-36" />{" "}
+                      <p>or</p>
                       <hr className="border-t border-white md:w-28 w-36" />
                     </div>
                     <button className="relative overflow-hidden  before:absolute before:top-0 before:left-[-100%] before:h-full before:w-[150%] before:bg-gradient-to-r before:from-transparent before:via-white/50 before:to-transparent before:blur-md before:transition-all before:duration-1000 hover:before:left-[100%] border-none transform transition-transform duration-300 hover:scale-110 text-[#4d4d4d] bg-[#f1f1f1] leading-[23px]  md:w-[19.511rem] w-full md:py-5 py-4 rounded-lg font-medium text-[20px]">
@@ -31,14 +32,32 @@ export default function Home() {
                     </button>
                   </div>
                 </div>
-                {/* <Image
-                  src="/perr.webp"
-                  alt="Movie Image"
-                  width={500}
-                  height={200}
-                  className=" "
-                /> */}
               </div>
+            </div>
+          </div>
+          <div className="text-white md:flex gap-6 items-start block ">
+            <Image
+              src="/moviebanner1.jpg"
+              alt="Movie Image"
+              width={800}
+              height={200}
+              className=" "
+            />
+
+            <div className="space-y-5 mb-6 p-4">
+              <h1 className="text-[50px] gap-5 leading-[56px]  font-bold ">
+                Great Entertainment
+              </h1>
+              <p className="font-medium text-[20px] leading-[28px]">
+                Watch Tom Clancy's Jack Ryan, award-winning Amazon Originals
+                such as The Boys and The Marvelous Mrs. Maisel, as well as
+                popular movies and TV shows, with all titles available to
+                download.
+              </p>
+
+              <button className="border-none transform transition-transform duration-300 hover:scale-110 text-[#4d4d4d] bg-[#f1f1f1] md:w-[15rem] w-full md:py-5 py-4 rounded-lg font-medium leading-[23px] text-[20px]">
+                Start your free trial
+              </button>
             </div>
           </div>
         </div>
