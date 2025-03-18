@@ -17,14 +17,14 @@ export default function Home() {
                     and TV shows for NGN 2,300/month. Watch now, cancel anytime.
                   </p>
                   <div className="flex flex-col items-start gap-4">
-                    <button className="border-none text-black bg-white w-72 py-5 rounded-lg font-medium text-[20px]">
+                    <button className="border-none transform transition-transform duration-300 hover:scale-110 text-black bg-white w-72 py-5 rounded-lg font-medium text-[20px]">
                       Mov video member? Sign in
                     </button>
                     <div className="flex items-center gap-6">
                       <hr className="border-t border-white w-28" /> <p>or</p>
                       <hr className="border-t border-white w-28" />
                     </div>
-                    <button className="border-none text-black bg-white w-72 py-5 rounded-lg font-medium text-[20px]">
+                    <button className="border-none transform transition-transform duration-300 hover:scale-110 text-black bg-white w-72 py-5 rounded-lg font-medium text-[20px]">
                       Start your 7 days free trial
                     </button>
                   </div>
