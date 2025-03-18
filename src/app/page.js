@@ -10,9 +10,9 @@ export default function Home() {
           <div className="text-white md:p-20 p-4">
             <div>
               <div className="md:flex block">
-                <div className="space-y-11">
-                  <h1 className="md:text-5xl md:font-bold font-medium text-4xl whitespace-nowrap">
-                    MovStream the Best
+                <div className="md:space-y-10 space-y-6">
+                  <h1 className="md:text-4xl md:font-bold font-medium text-4xl ">
+                  Welcome to  <span className="tracking-widest leading-4 border-b-4 border-gray-500 p-2">MovStream </span> 
                   </h1>
                   <p className="text-[20px] leading-[28px] font-medium md:w-[40rem]">
                     Enjoy exclusive Amazon Originals as well as popular movies

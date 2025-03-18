@@ -1,9 +1,10 @@
-import React from 'react';
+'use client'
+import React, { useEffect, useState } from 'react';
 import { IoPerson } from "react-icons/io5";
 const Header = () => {
     return (
         <>
-            <div className='flex items-center sticky top-0 bg-[#00050d] text-white bg-color justify-between md:px-10 px-4 py-5 md:mx-10 md:rounded-b-2xl'>
+            <div className=" flex items-center sticky top-0 z-50  text-white bg-color justify-between md:px-10 px-4 py-5 md:mx-10 md:rounded-b-2xl ">
                 <h1 className='text-2xl '>MovStream</h1>
                 <div className='flex items-center gap-2'>
                     <h2>EN</h2>
