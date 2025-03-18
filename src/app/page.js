@@ -7,7 +7,7 @@ export default function Home() {
       <div className="">
         <div className="bg-[#00050d]">
           <Header />
-          <div className="text-white md:p-20 p-6">
+          <div className="text-white md:p-20 p-5">
             <div>
               <div className="md:flex block">
                 <div className="space-y-10">
@@ -44,7 +44,7 @@ export default function Home() {
               className=" "
             />
 
-            <div className="space-y-5 pb-6 p-4">
+            <div className="space-y-5 pb-6 p-5">
               <h1 className="text-[50px] gap-5 leading-[56px]  font-bold ">
                 Great Entertainment
               </h1>
