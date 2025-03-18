@@ -3,7 +3,7 @@ import { IoPerson } from "react-icons/io5";
 const Header = () => {
     return (
         <>
-            <div className='flex items-center text-white bg-color justify-between md:px-10 px-4 py-5 md:mx-10 md:rounded-b-2xl'>
+            <div className='flex items-center sticky top-0 bg-transparent text-white bg-color justify-between md:px-10 px-4 py-5 md:mx-10 md:rounded-b-2xl'>
                 <h1 className='text-2xl '>Mov.</h1>
                 <div className='flex items-center gap-2'>
                     <h2>EN</h2>
