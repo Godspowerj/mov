@@ -23,7 +23,7 @@ export default function Home() {
                       Mov video member? Sign in
                     </button>
                     <div className="flex items-center gap-6">
-                      <hr className="border-t border-white md:w-28 w-36" />{" "}
+                      <hr className="border-t border-white md:w-28 w-36" />
                       <p>or</p>
                       <hr className="border-t border-white md:w-28 w-36" />
                     </div>
@@ -49,7 +49,7 @@ export default function Home() {
                 Great Entertainment
               </h1>
               <p className="font-medium text-[20px] leading-[28px]">
-                Watch Tom Clancy's Jack Ryan, award-winning Amazon Originals
+                Watch Tom Clancy&s Jack Ryan, award-winning Amazon Originals
                 such as The Boys and The Marvelous Mrs. Maisel, as well as
                 popular movies and TV shows, with all titles available to
                 download.
