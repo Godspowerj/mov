@@ -27,6 +27,7 @@ export default function Home() {
                   <div className="flex flex-col items-start gap-5">
                     <button>Mov video member? Sign in</button>
                     <button>Start your 7 days free trial</button>
+                    
                   </div>
                 </div>
               </div>
