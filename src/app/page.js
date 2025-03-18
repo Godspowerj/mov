@@ -11,7 +11,9 @@ export default function Home() {
             <div>
               <div className="md:flex block">
                 <div className="space-y-11">
-                  <h1 className="md:text-5xl md:font-bold font-medium text-4xl whitespace-nowrap"> The Ultimate Watchlist</h1>
+                  <h1 className="md:text-5xl md:font-bold font-medium text-4xl whitespace-nowrap">
+                    MovStream the Best
+                  </h1>
                   <p className="text-[22px] md:w-[40rem]">
                     Enjoy exclusive Amazon Originals as well as popular movies
                     and TV shows for NGN 2,300/month. Watch now, cancel anytime.
@@ -24,18 +26,18 @@ export default function Home() {
                       <hr className="border-t border-white w-28" /> <p>or</p>
                       <hr className="border-t border-white w-28" />
                     </div>
-                    <button className="border-none transform transition-transform duration-300 hover:scale-110 text-black bg-white md:w-72 w-full md:py-5 py-4 rounded-lg font-medium text-[20px]">
+                    <button className="relative overflow-hidden  before:absolute before:top-0 before:left-[-100%] before:h-full before:w-[150%] before:bg-gradient-to-r before:from-transparent before:via-white/50 before:to-transparent before:blur-md before:transition-all before:duration-1000 hover:before:left-[100%] border-none transform transition-transform duration-300 hover:scale-110 text-black bg-white md:w-72 w-full md:py-5 py-4 rounded-lg font-medium text-[20px]">
                       Start your 7 days free trial
                     </button>
                   </div>
                 </div>
-                <Image
+                {/* <Image
                   src="/perr.webp"
                   alt="Movie Image"
                   width={500}
                   height={200}
                   className=" "
-                />
+                /> */}
               </div>
             </div>
           </div>
