@@ -44,11 +44,11 @@ export default function Home() {
               className=" "
             />
 
-            <div className="space-y-5 pb-6 p-5">
-              <h1 className="text-[50px] gap-5 leading-[56px]  font-bold ">
+            <div className="space-y-5 md:pb-6 pb-4 p-5">
+              <h1 className="md:text-[50px] text-3xl gap-5 leading-[56px]  font-bold ">
                 Great Entertainment
               </h1>
-              <p className="font-medium text-[20px] leading-[28px]">
+              <p className="font-medium md:text-[20px] text-[17px] leading-[28px]">
                 Watch Tom Clancy&s Jack Ryan, award-winning Amazon Originals
                 such as The Boys and The Marvelous Mrs. Maisel, as well as
                 popular movies and TV shows, with all titles available to
