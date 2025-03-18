@@ -23,9 +23,10 @@ export default function Home() {
                       Mov video member? Sign in
                     </button>
                     <div className="flex items-center gap-6">
-                      <hr className="border-t border-white md:w-28 w-36" />
+                      {/* 
                       <p>or</p>
-                      <hr className="border-t border-white md:w-28 w-36" />
+                      */}
+                      <button className="flex items-center w-[19.511rem] gap-4"><hr className="border-t border-white w-full" />or<hr className="border-t border-white  w-full" /> </button>
                     </div>
                     <button className="relative overflow-hidden  before:absolute before:top-0 before:left-[-100%] before:h-full before:w-[150%] before:bg-gradient-to-r before:from-transparent before:via-white/50 before:to-transparent before:blur-md before:transition-all before:duration-1000 hover:before:left-[100%] border-none transform transition-transform duration-300 hover:scale-110 text-[#4d4d4d] bg-[#f1f1f1] leading-[23px]  md:w-[19.511rem] w-full md:py-5 py-4 rounded-lg font-medium text-[20px]">
                       Start your 7 days free trial
