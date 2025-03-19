@@ -21,7 +21,7 @@ const Banner = () => {
     ]
     return (
         <>
-            <div className='text-white md:flex block px-5 py-4  justify-center items-center'>
+            <div className='text-white md:flex block px-5 py-10  justify-center items-center'>
                 {items.map((item, index) => (
                     <div key={index} className='flex items-center space-y-7 flex-col'>
                         <Image src={item.image} width={300} height={200} alt=''/>

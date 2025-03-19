@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Header from "./component/header";
 import Banner from "./component/banner";
+import Footer from "./component/footer";
 
 export default function Home() {
   return (
@@ -79,6 +80,7 @@ export default function Home() {
             
           </div>
           <Banner/>
+          <Footer/>
         </div>
       </div>
     </>
