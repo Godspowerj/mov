@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Header from "./component/header";
+import Banner from "./component/banner";
 
 export default function Home() {
   return (
@@ -74,7 +75,10 @@ export default function Home() {
                 Start your free trial
               </button>
             </div>
+
+            
           </div>
+          <Banner/>
         </div>
       </div>
     </>
