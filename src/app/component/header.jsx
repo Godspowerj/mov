@@ -4,7 +4,7 @@ import { IoPerson } from "react-icons/io5";
 const Header = () => {
     return (
         <>
-            <div className=" flex items-center sticky top-0 z-50  text-white bg-[1A1A1A] shadow-2xl justify-between md:px-10 px-4 py-5 md:mx-10 md:rounded-b-2xl ">
+            <div className=" flex items-center sticky top-0 z-50  text-white bg-[#00000090]  shadow-2xl justify-between md:px-10 px-4 py-5 md:mx-10 md:rounded-b-2xl ">
                 <h1 className='text-2xl '>MovStream</h1>
                 <div className='flex items-center gap-2'>
                     <h2 className='text-base'>EN</h2>
