@@ -29,7 +29,6 @@ const Banner = () => {
                             <h2 className='text-[20px]'>{item.head}</h2>
                             <p>{item.description}</p>
                         </div>
-
                     </div>
                 ))}
             </div>
