@@ -5,11 +5,13 @@ import Sidebar from '../component/sidebar';
 const Layout = ({ children }) => {
     return (
         <div>
-            <div>
-                <Navbar />
-                <div className='flex w-full'>
-                    <Sidebar />
-                    {children}
+            <div className='flex h-screen'>
+                <Sidebar />
+                <div className='flex w-full h-screen '>
+                    <div className='bg-color w-full flex-1 md:px-10 px-4 pt-6'>
+                        <Navbar />
+                        {children}
+                    </div>
                 </div>
             </div>
         </div>
