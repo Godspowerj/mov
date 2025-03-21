@@ -1,10 +1,10 @@
 import React from 'react';
+import MovieProduct from './movieproduct';
 
 const DashboardPage = () => {
     return (
-        <div className=''>
-            <h1>Dashboard</h1>
-            <p>Welcome to the dashboard!</p>
+        <div className='flex-1 '>
+            <MovieProduct/>
         </div>
     );
 };

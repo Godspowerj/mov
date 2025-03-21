@@ -30,4 +30,8 @@ body {
   background:linear-gradient(to bottom, rbga(0, 0, 0, 0),rbga(0, 0, 0, 1));
 
 }
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 

@@ -48,20 +48,25 @@ const Sidebar = () => {
         }
     ];
     return (
-        <div className="bg-sidebar h-full w-80 md:flex flex-col items-center hidden justify-center">
-            <div className="text-white text-2xl font-semibold mb-6 absolute top-6">MovStream</div>
-            <ul className="flex flex-col space-y-6">
-                {menuitems.map((item, index) => (
-                    <li key={index} className="flex items-center space-x-4 px-6 text-gray-400 hover:text-white duration-100 transition-all transform hover:scale-110">
-                        <span className="text-xl">{item.icons}</span>
-                        <Link href={item.path} className="text-[20px]">{item.title}</Link>
-                    </li>
-                ))}
-            </ul>
-            <div className="absolute bottom-6">
-                <button className="text-red-500 text-2xl"><MdOutlineLogout /></button>
-            </div>
+        <div className='fixed top-0 left-0 bg-sidebar h-full  md:flex  items-center justify-center md:w-64 w-16 border-r min-h-screen text-base border-gray-300 py-2 flex flex-col'>
+
+        <div className="text-white text-2xl font-semibold absolute top-6">MovStream</div>
+   
+        <ul className="flex flex-col space-y-6 mt-12">
+            {menuitems.map((item, index) => (
+                <li key={index} className="flex items-center space-x-4 px-6 text-gray-400 hover:text-white transition-all duration-200 transform hover:scale-105">
+                    <span className="text-xl">{item.icons}</span>
+                    <Link href={item.path} className="text-[20px]">{item.title}</Link>
+                </li>
+            ))}
+        </ul>
+    
+
+        <div className="absolute bottom-6">
+            <button className="text-red-500 text-2xl"><MdOutlineLogout /></button>
         </div>
+    </div>
+    
     );
 };
 
