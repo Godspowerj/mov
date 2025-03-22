@@ -16,30 +16,34 @@ const MovieProduct = () => {
     ];
 
     return (
-        <div className="w-full overflow-x-auto">
-            <div className="flex gap-4 w-max">
-                {movieProduct.map((product, index) => (
-                    <div key={index} className="flex-none flex flex-col items-center gap-2 rounded-lg">
-                        <img
-                            src={product.image}
-                            alt={`Movie ${index}`}
-                            className="w-[200px] h-[300px] object-cover rounded-lg"
-                        />
-                        <p className="text-white">{product.title}</p>
-                    </div>
-                ))}
+        <div className="w-screen">
+            <div className="w-full overflow-x-auto mb-4">
+                <div className="flex gap-4 w-max">
+                    {movieProduct.map((product, index) => (
+                        <div key={index} className="flex-none flex flex-col items-center gap-2 rounded-lg">
+                            <img
+                                src={product.image}
+                                alt={`Movie ${index}`}
+                                className="w-[150px] h-[200px] object-cover rounded-lg"
+                            />
+                            <p className="text-white">{product.title}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
-            <div className="flex gap-4 w-max mt-4">
-                {movieProduct.map((product, index) => (
-                    <div key={index + movieProduct.length} className="flex-none flex flex-col items-center gap-2 rounded-lg">
-                        <img
-                            src={product.image}
-                            alt={`Movie ${index + movieProduct.length}`}
-                            className="w-[200px] h-[300px] object-cover rounded-lg"
-                        />
-                        <p className="text-white">{product.title}</p>
-                    </div>
-                ))}
+            <div className="w-full overflow-x-auto">
+                <div className="flex gap-4 w-max">
+                    {movieProduct.map((product, index) => (
+                        <div key={index + movieProduct.length} className="flex-none flex flex-col items-center gap-2 rounded-lg">
+                            <img
+                                src={product.image}
+                                alt={`Movie ${index + movieProduct.length}`}
+                                className="w-[150px] h-[200px] object-cover rounded-lg"
+                            />
+                            <p className="text-white">{product.title}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );
