@@ -2,6 +2,16 @@
 body {
   font-family: var(--font-outfit), sans-serif;
 }
+html, body {
+  overflow-x: hidden; /* Stops horizontal scrolling */
+  max-width: 100vw; /* Prevents page from expanding */
+}
+
+* {
+  max-width: 100%; 
+  box-sizing: border-box; 
+}
+
 
 :root {
   --primary-color: #797d86;
