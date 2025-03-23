@@ -15,7 +15,7 @@ const Navbar = () => {
         <div className='space-y-4 md:pt-8 pt-4 max-w-full pb-8 bg-color '>
             {/* Search Bar */}
             <div className='px-4 space-y-4'>
-                <div className='flex items-center  gap-5 w-full justify-between border-none'>
+                <div className='flex items-center  gap-6 w-full justify-between border-none'>
                     <button
                         className="flex flex-col md:hidden text-white  justify-center items-center gap-[13%] w-14 h-14 rounded-lg  transition-all  hover:border-white active:text-gray-500 active:shadow-[inset_4px_4px_12px_#c5c5c5,inset_-4px_-4px_12px_#ffffff]"
                         onClick={() => setIsOpen(!isOpen)}
