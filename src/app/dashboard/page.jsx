@@ -4,7 +4,7 @@ import Carosual from './carosual';
 
 const DashboardPage = () => {
     return (
-        <div className=''>
+        <div className='space-y-5'>
             <Carosual/>
             <MovieProduct/>
         </div>
