@@ -50,22 +50,21 @@ const MovieProduct = () => {
 
             </div>
 
-
             <div className="w-full space-y-6">
                 <div className='flex justify-between items-center px-3'>
-                    <p className='md:text-[24px] text-base text-white  font-medium'>Recommeded movies</p>
+                    <p className='md:text-[24px] text-base text-white  font-medium'>Recommended movies</p>
                     <p className='flex items-center gap-2 primary-color text-base'>more<IoChevronForwardSharp /></p>
                 </div>
-                <div className='overflow-x-auto scrollbar-hide'>
+                <div className='overflow-x-auto scrollbar-hide '>
                     <div className="flex gap-4 w-max">
-                        {movieProduct.map((product, index) => (
+                        {movieList.map((movie, index) => (
                             <div key={index} className="flex-none flex flex-col items-center gap-2 rounded-lg">
                                 <img
-                                    src={product.image}
-                                    alt={`Movie ${index + movieProduct.length}`}
+                                    src={`https://image.tmdb.org/t/p/w500${movie.poster_path}` }
+                                    alt={`Movie ${index}`}
                                     className="md:w-[150px] md:h-[200px] w-[100px] h-[150px] object-cover rounded-lg"
                                 />
-                                <p className="text-white">{product.title}</p>
+                                <p className="text-white">{movie.title.slice(0,15)}</p>
                             </div>
                         ))}
                     </div>
@@ -74,27 +73,29 @@ const MovieProduct = () => {
             </div>
 
 
+
             <div className="w-full space-y-6">
                 <div className='flex justify-between items-center px-3'>
-                    <p className='md:text-[24px] text-base  text-white  font-medium'>Suggestions</p>
+                    <p className='md:text-[24px] text-base text-white  font-medium'>Suggestions</p>
                     <p className='flex items-center gap-2 primary-color text-base'>more<IoChevronForwardSharp /></p>
                 </div>
-                <div className='overflow-x-auto scrollbar-hide'>
+                <div className='overflow-x-auto scrollbar-hide '>
                     <div className="flex gap-4 w-max">
-                        {movieProduct.map((product, index) => (
+                        {movieList.map((movie, index) => (
                             <div key={index} className="flex-none flex flex-col items-center gap-2 rounded-lg">
                                 <img
-                                    src={product.image}
-                                    alt={`Movie ${index + movieProduct.length}`}
+                                    src={`https://image.tmdb.org/t/p/w500${movie.poster_path}` }
+                                    alt={`Movie ${index}`}
                                     className="md:w-[150px] md:h-[200px] w-[100px] h-[150px] object-cover rounded-lg"
                                 />
-                                <p className="text-white">{product.title}</p>
+                                <p className="text-white">{movie.title.slice(0,15)}</p>
                             </div>
                         ))}
                     </div>
                 </div>
 
             </div>
+
         </div>
     );
 };
