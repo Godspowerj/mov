@@ -31,17 +31,17 @@ const Navbar = () => {
         <>
             <div className='space-y-4 pt-8 w-screen pb-8 bg-color ' >
                 <div className='px-4 space-y-4'>
-                    <div className='flex items-center w-full justify-between '>
-                        <div className='flex items-center w-full bg-color-2 border-2 px-4 text-white border-gray-700 rounded-lg py-2'>
-                            <IoSearchOutline />
-                            <input type="text" className='w-full outline-none border-none text-white pl-2' />
+                    <div className='flex items-center gap-5 w-full justify-between '>
+                        <div className='flex items-center px-2 w-full bg-gray-600 border-2 px-4bg-gray-50 text-white border-gray-700 rounded-lg py-2'>
+                            <IoSearchOutline className='text-[23px]' />
+                            <input type="text" placeholder='Search movies...' className='w-full outline-none border-none text-[20px]  text-white pl-2' />
                         </div>
                         <svg className='md:hidden block' xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#ffffff"><path d="M622.31-426.15h213.07v-140H622.31v140Zm-60 129.61V-590q0-15.46 10.34-25.81 10.35-10.34 25.81-10.34h260.77q15.46 0 25.81 10.34 10.34 10.35 10.34 25.81v187.69q0 15.46-10.34 25.81-10.35 10.35-25.81 10.35H631.92l-69.61 69.61ZM292.31-60q-29.92 0-51.12-21.19Q220-102.39 220-132.31v-695.38q0-29.92 21.19-51.12Q262.39-900 292.31-900h375.38q29.92 0 51.12 21.19Q740-857.61 740-827.69v146.15h-60V-730H280v500h400v-48.46h60v146.15q0 29.92-21.19 51.12Q697.61-60 667.69-60H292.31ZM280-170v37.69q0 4.62 3.85 8.46 3.84 3.85 8.46 3.85h375.38q4.62 0 8.46-3.85 3.85-3.84 3.85-8.46V-170H280Zm0-620h400v-37.69q0-4.62-3.85-8.46-3.84-3.85-8.46-3.85H292.31q-4.62 0-8.46 3.85-3.85 3.84-3.85 8.46V-790Zm0 0v-50 50Zm0 620v50-50Zm342.31-256.15v-140 140Z" /></svg>
                     </div>
 
 
-                    <span className='text-[20px] primary-color font-medium'>Movie Categories</span><div className=''>
-                        <ul className='flex items-center overflow-x-auto gap-4 scrollbar-hide py-4 primary-color justify-between whitespace-nowrap'>
+                    <span className='text-[24px] primary-color font-bold'>Movie Categories</span><div className=''>
+                        <ul className='flex items-center text-[20px] overflow-x-auto gap-4 scrollbar-hide py-4 primary-color justify-between whitespace-nowrap'>
                             {navbarItems.map((items, index) => (
                                 <li key={index}>
                                     {items.title}
