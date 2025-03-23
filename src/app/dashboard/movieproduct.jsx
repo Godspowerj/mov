@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import { IoChevronForwardSharp } from "react-icons/io5";
 
 const MovieProduct = () => {
     const movieProduct = [
@@ -16,51 +17,75 @@ const MovieProduct = () => {
     ];
 
     return (
-        <div className="w-screen space-y-6">
-            <p className='text-[24px] text-white pl-3 font-medium'>Trending Videos</p>
-            <div className="w-full overflow-x-auto scrollbar-hide ">
-                <div className="flex gap-4 w-max">
-                    {movieProduct.map((product, index) => (
-                        <div key={index} className="flex-none flex flex-col items-center gap-2 rounded-lg">
-                            <img
-                                src={product.image}
-                                alt={`Movie ${index}`}
-                                className="md:w-[150px] md:h-[200px] w-[100px] h-[150px] object-cover rounded-lg"
-                            />
-                            <p className="text-white">{product.title}</p>
-                        </div>
-                    ))}
+        <div className="w-screen space-y-15">
+
+
+            <div className="w-full space-y-6">
+                <div className='flex justify-between items-center'>
+                    <p className='text-[24px] text-white  font-medium'>Trending Videos</p>
+                    <p className='flex items-center gap-2 primary-color text-base'>more<IoChevronForwardSharp /></p>
                 </div>
+                <div className='overflow-x-auto scrollbar-hide '>
+                    <div className="flex gap-4 w-max">
+                        {movieProduct.map((product, index) => (
+                            <div key={index} className="flex-none flex flex-col items-center gap-2 rounded-lg">
+                                <img
+                                    src={product.image}
+                                    alt={`Movie ${index}`}
+                                    className="md:w-[150px] md:h-[200px] w-[100px] h-[150px] object-cover rounded-lg"
+                                />
+                                <p className="text-white">{product.title}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
             </div>
-            <p className='text-[24px] text-white pl-3 pt-5 font-medium'>Recommeded movies</p>
-            <div className="w-full overflow-x-auto scrollbar-hide">
-                <div className="flex gap-4 w-max">
-                    {movieProduct.map((product, index) => (
-                        <div key={index + movieProduct.length} className="flex-none flex flex-col items-center gap-2 rounded-lg">
-                            <img
-                                src={product.image}
-                                alt={`Movie ${index + movieProduct.length}`}
-                                className="md:w-[150px] md:h-[200px] w-[100px] h-[150px] object-cover rounded-lg"
-                            />
-                            <p className="text-white">{product.title}</p>
-                        </div>
-                    ))}
+
+
+            <div className="w-full space-y-6">
+                <div className='flex justify-between items-center'>
+                    <p className='text-[24px] text-white  font-medium'>Recommeded movies</p>
+                    <p className='flex items-center gap-2 primary-color text-base'>more<IoChevronForwardSharp /></p>
                 </div>
+                <div className='overflow-x-auto scrollbar-hide'>
+                    <div className="flex gap-4 w-max">
+                        {movieProduct.map((product, index) => (
+                            <div key={index + movieProduct.length} className="flex-none flex flex-col items-center gap-2 rounded-lg">
+                                <img
+                                    src={product.image}
+                                    alt={`Movie ${index + movieProduct.length}`}
+                                    className="md:w-[150px] md:h-[200px] w-[100px] h-[150px] object-cover rounded-lg"
+                                />
+                                <p className="text-white">{product.title}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
             </div>
-            <p className='text-[24px] text-white pl-3 pt-5 font-medium'>Suggestions</p>
-            <div className="w-full overflow-x-auto scrollbar-hide">
-                <div className="flex gap-4 w-max">
-                    {movieProduct.map((product, index) => (
-                        <div key={index + movieProduct.length} className="flex-none flex flex-col items-center gap-2 rounded-lg">
-                            <img
-                                src={product.image}
-                                alt={`Movie ${index + movieProduct.length}`}
-                                className="md:w-[150px] md:h-[200px] w-[100px] h-[150px] object-cover rounded-lg"
-                            />
-                            <p className="text-white">{product.title}</p>
-                        </div>
-                    ))}
+
+
+            <div className="w-full space-y-6">
+                <div className='flex justify-between items-center'>
+                    <p className='text-[24px] text-white  font-medium'>Suggestions</p>
+                    <p className='flex items-center gap-2 primary-color text-base'>more<IoChevronForwardSharp /></p>
                 </div>
+                <div className='overflow-x-auto scrollbar-hide'>
+                    <div className="flex gap-4 w-max">
+                        {movieProduct.map((product, index) => (
+                            <div key={index + movieProduct.length} className="flex-none flex flex-col items-center gap-2 rounded-lg">
+                                <img
+                                    src={product.image}
+                                    alt={`Movie ${index + movieProduct.length}`}
+                                    className="md:w-[150px] md:h-[200px] w-[100px] h-[150px] object-cover rounded-lg"
+                                />
+                                <p className="text-white">{product.title}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
             </div>
         </div>
     );

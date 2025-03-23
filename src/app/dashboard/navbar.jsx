@@ -53,11 +53,15 @@ const Navbar = () => {
 
 
 
-
-                <div className='flex items-center gap-4 overflow-x-auto scrollbar-hide'>
-                    {images.map((image, index) => (
-                        <img key={index} src={image.src} alt={image.alt} className='md:w-40 md:h-40 w-30 h-30' />
+          
+                <div >
+                    <p className='text-[24px] text-white pl-3 font-medium py-4'>Popular Playlist</p>
+                    <div className='flex items-center gap-4 overflow-x-auto scrollbar-hide'>
+                        {images.map((image, index) => (
+                        <img key={index} src={image.src} alt={image.alt} className='md:w-36 md:h-36 w-30 h-30' />
                     ))}
+                    </div>
+                    
                 </div>
             </div>
         </>

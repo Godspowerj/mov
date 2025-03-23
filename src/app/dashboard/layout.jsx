@@ -5,9 +5,9 @@ import Sidebar from '../component/sidebar';
 const Layout = ({ children }) => {
     return (
         <div className='overflow-hidden w-screen'>
-            <Navbar />
-            <div className='flex w-full md:pl-80 overflow-y-auto bg-color h-screen scrollbar-hide'>
-                <Sidebar />
+            <Sidebar />
+            <div className='flex flex-col  overflow-y-auto bg-color h-screen scrollbar-hide'>
+                <Navbar />
                 {children}
             </div>
         </div>
