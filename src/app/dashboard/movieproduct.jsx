@@ -17,7 +17,7 @@ const MovieProduct = () => {
 
     return (
         <div className="w-screen space-y-6">
-            <p className='text-base text-white pl-3 font-bold'>Trending Videos</p>
+            <p className='text-[24px] text-white pl-3 font-medium'>Trending Videos</p>
             <div className="w-full overflow-x-auto scrollbar-hide ">
                 <div className="flex gap-4 w-max">
                     {movieProduct.map((product, index) => (
@@ -32,7 +32,7 @@ const MovieProduct = () => {
                     ))}
                 </div>
             </div>
-            <p className='text-base text-white pl-3 pt-5'>Recommeded movies</p>
+            <p className='text-[24px] text-white pl-3 pt-5 font-medium'>Recommeded movies</p>
             <div className="w-full overflow-x-auto scrollbar-hide">
                 <div className="flex gap-4 w-max">
                     {movieProduct.map((product, index) => (
@@ -47,7 +47,7 @@ const MovieProduct = () => {
                     ))}
                 </div>
             </div>
-            <p className='text-base text-white pl-3 pt-5'>Suggestions</p>
+            <p className='text-[24px] text-white pl-3 pt-5 font-medium'>Suggestions</p>
             <div className="w-full overflow-x-auto scrollbar-hide">
                 <div className="flex gap-4 w-max">
                     {movieProduct.map((product, index) => (
