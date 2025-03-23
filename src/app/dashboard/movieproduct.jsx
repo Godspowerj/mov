@@ -17,11 +17,9 @@ const MovieProduct = () => {
     ];
 
     return (
-        <div className="w-screen md:space-y-13 space-y-10">
-
-
+        <div className=" md:space-y-13 space-y-10">
             <div className="w-full space-y-6">
-                <div className='flex justify-between items-center'>
+                <div className='flex justify-between items-center px-3'>
                     <p className='text-[24px] text-white  font-medium'>Trending Videos</p>
                     <p className='flex items-center gap-2 primary-color text-base'>more<IoChevronForwardSharp /></p>
                 </div>
@@ -44,14 +42,14 @@ const MovieProduct = () => {
 
 
             <div className="w-full space-y-6">
-                <div className='flex justify-between items-center'>
+                <div className='flex justify-between items-center px-3'>
                     <p className='text-[24px] text-white  font-medium'>Recommeded movies</p>
                     <p className='flex items-center gap-2 primary-color text-base'>more<IoChevronForwardSharp /></p>
                 </div>
                 <div className='overflow-x-auto scrollbar-hide'>
                     <div className="flex gap-4 w-max">
                         {movieProduct.map((product, index) => (
-                            <div key={index + movieProduct.length} className="flex-none flex flex-col items-center gap-2 rounded-lg">
+                            <div key={index} className="flex-none flex flex-col items-center gap-2 rounded-lg">
                                 <img
                                     src={product.image}
                                     alt={`Movie ${index + movieProduct.length}`}
@@ -67,14 +65,14 @@ const MovieProduct = () => {
 
 
             <div className="w-full space-y-6">
-                <div className='flex justify-between items-center'>
+                <div className='flex justify-between items-center px-3'>
                     <p className='text-[24px] text-white  font-medium'>Suggestions</p>
                     <p className='flex items-center gap-2 primary-color text-base'>more<IoChevronForwardSharp /></p>
                 </div>
                 <div className='overflow-x-auto scrollbar-hide'>
                     <div className="flex gap-4 w-max">
                         {movieProduct.map((product, index) => (
-                            <div key={index + movieProduct.length} className="flex-none flex flex-col items-center gap-2 rounded-lg">
+                            <div key={index} className="flex-none flex flex-col items-center gap-2 rounded-lg">
                                 <img
                                     src={product.image}
                                     alt={`Movie ${index + movieProduct.length}`}
