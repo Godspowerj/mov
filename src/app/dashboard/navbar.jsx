@@ -29,7 +29,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div className='space-y-4 md:pt-8 pt-4 w-screen pb-8 bg-color ' >
+            <div className='space-y-4 md:pt-8 pt-4 w-screen pb-7 bg-color ' >
                 <div className='px-4 space-y-4'>
                     <div className='flex items-center gap-5 w-full justify-between '>
                         <div className='flex items-center px-2 w-full bg-gray-600 border-2 px-4bg-gray-50 text-white border-gray-700 rounded-lg py-2'>
