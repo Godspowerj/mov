@@ -23,16 +23,16 @@ const Navbar = () => {
                         <input 
                             type="text" 
                             placeholder='Search movies...' 
-                            className='w-full outline-none border-none text-[18px] text-white pl-2' 
+                            className='w-full outline-none border-none text-[18px] text-white pl-2 ' 
                         />
                     </div>
                     <svg className='md:hidden block' xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#ffffff">
-                        <path d="M622.31-426.15h213.07v-140H622.31v140Zm-60 129.61V-590q0-15.46 10.34-25.81 10.35-10.34 25.81-10.34h260.77q15.46 0 25.81 10.34 10.34 10.35 10.34 25.81v187.69q0 15.46-10.34 25.81-10.35 10.35-25.81 10.35H631.92l-69.61 69.61ZM292.31-60q-29.92 0-51.12-21.19Q220-102.39 220-132.31v-695.38q0-29.92 21.19-51.12Q262.39-900 292.31-900h375.38q29.92 0 51.12 21.19Q740-857.61 740-827.69v146.15h-60V-730H280v500h400v-48.46h60v146.15q0 29.92-21.19 51.12Q697.61-60 667.69-60H292.31ZM280-170v37.69q0 4.62 3.85 8.46 3.84 3.85 8.46 3.85h375.38q4.62 0 8.46-3.85 3.85-3.84 3.85-8.46V-170H280Zm0-620h400v-37.69q0-4.62-3.85-8.46-3.84-3.85-8.46-3.85H292.31q-4.62 0-8.46 3.85-3.85 3.84-3.85 8.46V-790Zm0 0v-50 50Zm0 620v50-50Zm342.31-256.15v-140 140Z" />
+                        <path d="M622.31-426.15h213.07v-140H622.31v140Zm-60 129.61V-590q0-15.46 10.34-25.81 10.35-10.34 25.81-10.34h260.77q15.46 0 25.81 10.34 10.34 10.35 10.34 25.81v187.69q0 15.46-10.34 25.81-10.35 10.35-25.81 10.35H631.92l-69.61 69.61ZM292.31-60q-29.92 0-51.12-21.19Q220-102.39 220-132.31v-695.38q0-29.92</svg> 21.19-51.12Q262.39-900 292.31-900h375.38q29.92 0 51.12 21.19Q740-857.61 740-827.69v146.15h-60V-730H280v500h400v-48.46h60v146.15q0 29.92-21.19 51.12Q697.61-60 667.69-60H292.31ZM280-170v37.69q0 4.62 3.85 8.46 3.84 3.85 8.46 3.85h375.38q4.62 0 8.46-3.85 3.85-3.84 3.85-8.46V-170H280Zm0-620h400v-37.69q0-4.62-3.85-8.46-3.84-3.85-8.46-3.85H292.31q-4.62 0-8.46 3.85-3.85 3.84-3.85 8.46V-790Zm0 0v-50 50Zm0 620v50-50Zm342.31-256.15v-140 140Z" />
                     </svg>
                 </div>
 
                 {/* Movie Categories */}
-                <span className='text-[24px] primary-color font-bold'>Movie Categories</span>
+                <span className='text-[24px] text-white font-bold'>Movie Categories</span>
                 <div className='overflow-hidden'>
                     <ul className='flex items-center text-[20px] overflow-x-auto md:gap-10 gap-5  scrollbar-hide py-4 primary-color whitespace-nowrap'>
                         {navbarItems.map((title, index) => (

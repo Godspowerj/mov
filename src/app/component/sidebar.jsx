@@ -1,3 +1,4 @@
+'use client'
 import Link from 'next/link';
 import React from 'react';
 import { IoHomeOutline } from "react-icons/io5";
@@ -8,6 +9,7 @@ import { AiOutlineAppstore } from "react-icons/ai";
 import { IoSettingsOutline } from "react-icons/io5";
 import { LuCircleHelp } from "react-icons/lu";
 import { MdOutlineLogout } from "react-icons/md";
+import { usePathname } from 'next/navigation';
 
 const Sidebar = () => {
     const menuitems = [
@@ -18,7 +20,7 @@ const Sidebar = () => {
         },
         {
             icons: <FaTv />,
-            path: "/dashboard/tv-shows",
+            path: "/dashboard/tvShows",
             title: "TV Shows"
         },
         {
@@ -47,16 +49,22 @@ const Sidebar = () => {
             title: "Help"
         }
     ];
+    const pathname = usePathname();
+    console.log("Current Pathname:", pathname);
+    const isActive = (href) => {
+      return  pathname === href ? " transition-all duration-200 transform scale-105 text-white bg-gray-800 rounded-full py-2" : "text-gray-400";
+    };
     return (
+
         <div className='fixed top-0 left-0 bg-sidebar h-full md:flex items-center justify-center md:w-64 min-h-screen text-base py-2 flex-col hidden '>
 
             <div className="text-white text-2xl font-semibold absolute top-6">MovStream</div>
 
             <ul className="flex flex-col space-y-6 mt-12">
                 {menuitems.map((item, index) => (
-                    <li key={index} className="flex items-center space-x-4 px-6 text-gray-400 hover:text-white transition-all duration-200 transform hover:scale-105">
+                    <li key={index} className={`flex items-center space-x-4 px-6 hover:text-white ${isActive(item.path)}`}>
                         <span className="text-xl">{item.icons}</span>
-                        <Link href={item.path} className="text-[20px]">{item.title}</Link>
+                        <Link href={item.path}  className={`text-[20px]`}>{item.title}</Link>
                     </li>
                 ))}
             </ul>

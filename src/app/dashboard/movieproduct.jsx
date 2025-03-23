@@ -17,7 +17,7 @@ const MovieProduct = () => {
     ];
 
     return (
-        <div className=" md:space-y-13 space-y-10">
+        <div className=" md:space-y-13 space-y-10 ">
             <div className="w-full space-y-6">
                 <div className='flex justify-between items-center px-3'>
                     <p className='md:text-[24px] text-base text-white  font-medium'>Trending Videos</p>
