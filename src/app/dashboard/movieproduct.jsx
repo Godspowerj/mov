@@ -17,7 +17,7 @@ const MovieProduct = () => {
     ];
 
     return (
-        <div className="w-screen space-y-15">
+        <div className="w-screen md:space-y-13 space-y-10">
 
 
             <div className="w-full space-y-6">

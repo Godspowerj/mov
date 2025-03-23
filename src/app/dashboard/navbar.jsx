@@ -16,7 +16,7 @@ const Navbar = () => {
         { title: 'K-Drama' },
     ]
     const images = [
-        { src: '/AppleTvLogo.png', alt: 'Image 1' },
+        { src: '/AppleTVLogo.png', alt: 'Image 1' },
         { src: '/NetflixLogo.png', alt: 'Image 2' },
         { src: '/PrimeVideoLogo.png', alt: 'Image 3' },
         { src: '/ShowmaxLogo.png', alt: 'Image 4' },
