@@ -41,7 +41,7 @@ const Navbar = () => {
 
 
                     <span className='text-[24px] primary-color font-bold'>Movie Categories</span><div className=''>
-                        <ul className='flex items-center text-[20px] overflow-x-auto gap-4 scrollbar-hide py-4 primary-color justify-between whitespace-nowrap'>
+                        <ul className='flex items-center text-[20px] overflow-x-auto gap-8 scrollbar-hide py-4 primary-color justify-between whitespace-nowrap'>
                             {navbarItems.map((items, index) => (
                                 <li key={index}>
                                     {items.title}
