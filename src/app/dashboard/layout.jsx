@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
     return (
         <div className='flex h-screen w-full'>
             <Sidebar />
-            <div className="flex flex-col flex-1 overflow-y-auto bg-color scrollbar-hide ml-64">
+            <div className="flex flex-col flex-1 overflow-y-auto bg-color scrollbar-hide ml-0 md:ml-64">
                 <Navbar />
                 {children}
             </div>

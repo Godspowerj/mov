@@ -48,7 +48,7 @@ const Sidebar = () => {
         }
     ];
     return (
-        <div className='fixed top-0 left-0 bg-sidebar hidden h-full md:flex items-center justify-center md:w-64 w-16  min-h-screen text-base  py-2  flex-col'>
+        <div className='fixed top-0 left-0 bg-sidebar h-full md:flex items-center justify-center md:w-64 min-h-screen text-base py-2 flex-col hidden '>
 
             <div className="text-white text-2xl font-semibold absolute top-6">MovStream</div>
 
