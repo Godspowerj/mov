@@ -20,7 +20,7 @@ const MovieProduct = () => {
         <div className=" md:space-y-13 space-y-10">
             <div className="w-full space-y-6">
                 <div className='flex justify-between items-center px-3'>
-                    <p className='text-[24px] text-white  font-medium'>Trending Videos</p>
+                    <p className='md:text-[24px] text-base text-white  font-medium'>Trending Videos</p>
                     <p className='flex items-center gap-2 primary-color text-base'>more<IoChevronForwardSharp /></p>
                 </div>
                 <div className='overflow-x-auto scrollbar-hide '>
@@ -43,7 +43,7 @@ const MovieProduct = () => {
 
             <div className="w-full space-y-6">
                 <div className='flex justify-between items-center px-3'>
-                    <p className='text-[24px] text-white  font-medium'>Recommeded movies</p>
+                    <p className='md:text-[24px] text-base text-white  font-medium'>Recommeded movies</p>
                     <p className='flex items-center gap-2 primary-color text-base'>more<IoChevronForwardSharp /></p>
                 </div>
                 <div className='overflow-x-auto scrollbar-hide'>
@@ -66,7 +66,7 @@ const MovieProduct = () => {
 
             <div className="w-full space-y-6">
                 <div className='flex justify-between items-center px-3'>
-                    <p className='text-[24px] text-white  font-medium'>Suggestions</p>
+                    <p className='md:text-[24px] text-base  text-white  font-medium'>Suggestions</p>
                     <p className='flex items-center gap-2 primary-color text-base'>more<IoChevronForwardSharp /></p>
                 </div>
                 <div className='overflow-x-auto scrollbar-hide'>

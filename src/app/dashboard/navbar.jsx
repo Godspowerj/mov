@@ -34,7 +34,7 @@ const Navbar = () => {
                 {/* Movie Categories */}
                 <span className='text-[24px] primary-color font-bold'>Movie Categories</span>
                 <div className='overflow-hidden'>
-                    <ul className='flex items-center text-[20px] overflow-x-auto md:gap-10 gap-7  scrollbar-hide py-4 primary-color whitespace-nowrap'>
+                    <ul className='flex items-center text-[20px] overflow-x-auto md:gap-10 gap-5  scrollbar-hide py-4 primary-color whitespace-nowrap'>
                         {navbarItems.map((title, index) => (
                             <li key={index} className='shrink-0'>{title}</li>
                         ))}
