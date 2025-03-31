@@ -96,8 +96,8 @@ const Sidebar = ({ isOpen }) => {
           {menuitems
             .slice(0, 5) // Show only the first 5 items in the bottom navbar
             .map((item, index) => (
-              <Link key={index} href={item.path}>
-                <div className={`flex flex-col items-center text-white hover:text-gray-300 ${isActive(item.path)}`}>
+              <Link key={index} href={item.path} className={`flex flex-col items-center text-gray-400 }`}>
+                <div>
                   <span className="text-xl">{item.icons}</span>
                 </div>
               </Link>
