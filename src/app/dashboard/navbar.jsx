@@ -12,20 +12,25 @@ const Navbar = () => {
         'Kids', 'Education', 'Game', 'TV/Series', 'Bollywood', 'K-Drama'
     ];
     const [isOpen, setIsOpen] = useState(false);
+    const [isOpens, setIsOpens] = useState(false);
     const router = useRouter();
     return (
         <div className='space-y-4 md:pt-6 2xl:pt-10 pt-4 max-w-full bg-color'>
             <div className='px-4 space-y-4'>
                 <div className='flex items-center gap-6 w-full justify-between border-none'>
                     {/* Hamburger Menu */}
-                    <label onClick={() => setIsOpen(!isOpen)} className='transform md:hidden block scale-150'>
+                    <div onClick={setIsOpens(!isOpens)} >
+                      <label onClick={() => setIsOpen(!isOpen)} className='transform md:hidden block scale-150'>
                         <div className="w-9 h-10 cursor-pointer flex flex-col items-center justify-center">
                             <input className="hidden peer" type="checkbox" />
                             <div className="w-[50%] h-[2px] bg-white rounded-sm transition-all duration-300 origin-left translate-y-[0.45rem] peer-checked:rotate-[-45deg]"></div>
                             <div className="w-[50%] h-[2px] bg-white rounded-md transition-all duration-300 origin-center peer-checked:hidden"></div>
                             <div className="w-[50%] h-[2px] bg-white rounded-md transition-all duration-300 origin-left -translate-y-[0.45rem] peer-checked:rotate-[45deg]"></div>
                         </div>
-                    </label>
+                    </label>  
+                    </div>
+                    
+                  
 
                     {/* Search Bar */}
                     <div className='relative flex items-center px-2 w-full bg-transparent  border-gray-700 rounded-lg py-2'>

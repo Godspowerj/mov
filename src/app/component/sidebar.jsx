@@ -11,7 +11,7 @@ import { LuCircleHelp } from "react-icons/lu";
 import { MdOutlineLogout } from "react-icons/md";
 import { usePathname} from 'next/navigation';
 
-const Sidebar = ({ isOpen }) => {
+const Sidebar = ({ isOpens }) => {
     const menuitems = [
         {
             icons: <IoHomeOutline />,
@@ -69,29 +69,28 @@ const Sidebar = ({ isOpen }) => {
     //         document.removeEventListener("mousedown", handleClickOutside);
     //     };
     // }, []);
-    
+
     return (
+        isOpens && (
+            <div className={`fixed ${isOpen ? 'bottom-0 left-0 w-full' : 'md:top-0 md:left-0 md:w-64'} bg-sidebar h-full flex items-center justify-center 2xl:justify-start min-h-screen text-base py-2 flex-col`}>
+                <div className="text-white text-2xl font-semibold absolute hidden md:flex top-6 2xl:hidden">MovStream</div>
 
-        <div className='fixed top-0 left-0 bg-sidebar h-full  flex items-center justify-center 2xl:justify-start md:w-64 min-h-screen text-base py-2 flex-col '>
-            <div className="text-white text-2xl font-semibold absolute hidden md:flex top-6 2xl:hidden">MovStream</div>
+                <ul className={`flex ${isOpen ? 'flex-row justify-around w-full py-4' : 'flex-col space-y-6 mt-12'}`}>
+                    {menuitems.map((item, index) => (
+                        <Link key={index} href={item.path}>
+                            <li className={`flex items-center ${isOpen ? 'flex-col space-y-1' : 'space-x-4 md:px-6 px-5'} hover:text-white ${isActive(item.path)}`}>
+                                <span className="text-xl">{item.icons}</span>
+                                <p className={`text-[20px] 2xl:text-2xl ${isOpen ? 'text-xs' : 'hidden md:flex'}`}>{item.title}</p>
+                            </li>
+                        </Link>
+                    ))}
+                </ul>
 
-            <ul className="flex flex-col space-y-6 mt-12">
-                {menuitems.map((item, index) => (
-                    <Link key={index} href={item.path}>
-                        <li className={`flex items-center space-x-4 md:px-6 px-5 hover:text-white ${isActive(item.path)}`}>
-                            <span className="text-xl">{item.icons}</span>
-                            <p className={`text-[20px] 2xl:text-2xl hidden md:flex`}>{item.title}</p>
-                        </li>
-                    </Link>
-                ))}
-            </ul>
-
-
-            <div className="absolute bottom-6 pl-5">
-                <button className="text-red-500 text-2xl"><MdOutlineLogout /></button>
+                <div className="absolute bottom-6 pl-5">
+                    <button className="text-red-500 text-2xl"><MdOutlineLogout /></button>
+                </div>
             </div>
-        </div>
-
+        )
     );
 };
 

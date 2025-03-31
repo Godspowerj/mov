@@ -25,7 +25,7 @@ const Search = () => {
   return (
     <div className="min-h-screen">
       <div className="">
-        <div className="grid lg:grid-cols-8 grid-cols-4 gap-4 w-full md:w-auto">
+        <div className="grid lg:grid-cols-8 grid-cols-4 gap-2 w-full md:w-auto">
           {movieList.map((movie, index) => (
             <div
               key={index}
@@ -37,7 +37,7 @@ const Search = () => {
                 className="w-[100px] h-[150px] lg:w-[150px] lg:h-[200px] 2xl:w-[600px] 2xl:h-[800px] object-cover rounded-lg"
               />
               <p className="text-white text-sm md:text-base 2xl:text-5xl">
-                {movie.title.slice(0, 15)}
+                {movie.title.length > 15 ? `${movie.title.slice(0, 15)}...` : movie.title}
               </p>
             </div>
           ))}
