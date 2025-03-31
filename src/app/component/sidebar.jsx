@@ -85,7 +85,7 @@ const Sidebar = ({ isOpen }) => {
               <Link key={index} href={item.path}>
                 <li className={`flex items-center space-x-4 md:px-6 px-5 hover:text-white ${isActive(item.path)}`}>
                   <span className="text-xl">{item.icons}</span>
-                  <p className="text-[20px] 2xl:text-2xl">{item.title}</p>
+                  <p className="text-[18px] 2xl:text-2xl">{item.title}</p>
                 </li>
               </Link>
             ))}
