@@ -92,7 +92,7 @@ const Sidebar = ({ isOpen }) => {
         </ul>
       
         {/* Bottom Navbar (Visible only on smaller screens) */}
-        <div className="fixed bottom-0 left-0 w-full bg-sidebar flex md:hidden justify-around py-3">
+        <div className="fixed max-md:bottom-0 left-0 w-full bg-sidebar flex md:hidden justify-around py-3">
           {menuitems
             .slice(0, 5) // Show only the first 5 items in the bottom navbar
             .map((item, index) => (

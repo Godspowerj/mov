@@ -15,15 +15,11 @@ const Navbar = () => {
     const router = useRouter();
     return (
         <div className='space-y-4 md:pt-6 2xl:pt-10 pt-4 max-w-full bg-color'>
-            <div className='px-4 space-y-4'>
-                <div className='flex items-center gap-6 w-full justify-between border-none'>
-                    
-                    
-                  
-
+            <div className='px-3 space-y-4'>
+                <div className='flex items-center w-full justify-between border-none'>
                     {/* Search Bar */}
-                    <div className='relative flex items-center px-2 w-full bg-transparent  border-gray-700 rounded-lg py-2'>
-                           <div className="w-full max-w-lg bg-gray-800 p-3 rounded-lg flex items-center">
+                    <div className='relative flex items-center w-full bg-transparent  border-gray-700 rounded-lg py-2'>
+                           <div className="w-full max-w-lg bg-gray-800 p-2 rounded-lg flex items-center">
                             <IoSearchOutline className="text-[23px] text-white" />
                             <input
                                 type="text"
@@ -36,9 +32,6 @@ const Navbar = () => {
                             />
                         </div>
                     </div>
-                    
-
-                    <Image src="/mobile.png" width={30} height={30} layout="intrinsic" alt="Mobile" />
                 </div>
 
                 {/* Movie Categories */}
