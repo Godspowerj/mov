@@ -4,10 +4,13 @@ import { IoChevronForwardSharp } from "react-icons/io5";
 
 const MovieProduct = () => {
     const [movieList, setMovieList] = useState([]);
-    const [tvList, setTvList] = useState([]); 
-    const [upComingList, setUpComingList] = useState([]); 
-    const [topRatedList, setTopRatedList] = useState([]); 
- const apiKey = process.env.NEXT_PUBLIC_MOVIE_API_KEY;
+    const [tvList, setTvList] = useState([]);
+    const [upComingList, setUpComingList] = useState([]);
+    const [topRatedList, setTopRatedList] = useState([]);
+    const apiKey = process.env.NEXT_PUBLIC_MOVIE_API_KEY;
+    
+    console.log("API Key:", apiKey);
+
     const getMovieProduct = async () => {
         let movies = [];
         for (let i = 1; i <= 2; i++) {
@@ -15,16 +18,7 @@ const MovieProduct = () => {
             const data = await res.json();
             movies = movies.concat(data.results);
         }
-        setMovieList(movies); // Update state once
-    };
-    const getTopRatedProduct = async () => {
-        let toprated = [];
-        for (let i = 1; i <= 2; i++) {
-            const res = await fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&page=${i}`);
-            const data = await res.json();
-            toprated = toprated.concat(data.results);
-        }
-        setTopRatedList(toprated); // Update state once
+        setMovieList(movies);
     };
 
     const getTvProduct = async () => {
@@ -34,16 +28,27 @@ const MovieProduct = () => {
             const data = await res.json();
             tvShows = tvShows.concat(data.results);
         }
-        setTvList(tvShows); // Update state once
+        setTvList(tvShows);
     };
+
     const getUpcomingProduct = async () => {
-        let upComing= [];
+        let upComing = [];
         for (let i = 1; i <= 2; i++) {
-            const res = await fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}&language=en-US&page=${i}`);
+            const res = await fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}&page=${i}`);
             const data = await res.json();
             upComing = upComing.concat(data.results);
         }
-        setUpComingList(upComing); 
+        setUpComingList(upComing);
+    };
+
+    const getTopRatedProduct = async () => {
+        let topRated = [];
+        for (let i = 1; i <= 2; i++) {
+            const res = await fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&page=${i}`);
+            const data = await res.json();
+            topRated = topRated.concat(data.results);
+        }
+        setTopRatedList(topRated);
     };
 
     useEffect(() => {
@@ -59,14 +64,13 @@ const MovieProduct = () => {
             <Section title="Top Rated ❤️‍🔥" items={topRatedList} />
             <Section title="Popular TV Shows" items={tvList} />
             <Section title='Upcoming Movies' items={upComingList} />
-
             <p className='text-gray-500 text-center'>----------- no more content ------------</p>
         </div>
     );
 };
 
-// Reusable Section Component
-const Section = ({ title, items, isTv }) => (
+// Section Component
+const Section = ({ title, items }) => (
     <div className="w-full space-y-6 xl:space-y-8 2xl:space-y-10">
         <div className="flex justify-between items-center px-4">
             <p className="text-base md:text-[24px]  2xl:text-5xl text-white font-medium ">{title}</p>
