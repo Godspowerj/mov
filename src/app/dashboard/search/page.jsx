@@ -25,7 +25,7 @@ const Search = () => {
   return (
     <div className="min-h-screen">
       <div className="">
-        <div className="grid grid-cols-8 gap-4 w-full md:w-auto">
+        <div className="grid lg:grid-cols-8 grid-cols-4 gap-4 w-full md:w-auto">
           {movieList.map((movie, index) => (
             <div
               key={index}
