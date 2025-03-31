@@ -29,14 +29,14 @@ const Search = () => {
       <div className="">
        
         <div className='overflow-hidden '>
-          <ul className='flex items-center lg:text-base overflow-x-auto md:gap-10 gap-5 scrollbar-hide py-4 text-white px-4 whitespace-nowrap'>
+          <ul className='flex items-center lg:text-base overflow-x-auto md:gap-10 gap-5 px-4 scrollbar-hide py-4 text-white px- whitespace-nowrap'>
             {navbarItems.map((title, index) => (
               <li key={index} className='shrink-0'>{title}</li>
             ))}
           </ul>
         </div>
 
-        <div className="grid lg:grid-cols-8 grid-cols-3 gap-3 py-3 pt-2 space-y-2 w-full md:w-auto">
+        <div className="grid lg:grid-cols-8 grid-cols-3 2xl:space-y-10 py-3 xl:gap-4 gap-2 pt-2 space-y-2 w-full md:w-auto">
           {movieList.map((movie, index) => (
             <div
               key={index}
@@ -45,12 +45,12 @@ const Search = () => {
               <img
                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                 alt={`Movie ${index}`}
-                className="w-[150px] h-[150px] lg:w-[150px] lg:h-[200px] 2xl:w-[600px] 2xl:h-[800px] object-cover rounded-lg"
+                className="w-[150px] h-[150px]  lg:w-[150px] lg:h-[200px] 2xl:w-[600px] 2xl:h-[800px] object-cover rounded-lg"
               />
               <p className="text-white text-sm md:text-base 2xl:text-5xl">
                 {movie.title.length > 15 ? `${movie.title.slice(0, 10)}...` : movie.title}
               </p>
-              <div className='text-center text-white  bg-amber-700 rounded-lg py-1'>
+              <div className='text-center text-white 2xl:w-44 bg-amber-700 rounded-lg py-1'>
                 <button className='text-center'>Watch now</button>
               </div>
             </div>
