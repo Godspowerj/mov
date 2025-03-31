@@ -3,16 +3,17 @@ import React, { useState } from 'react';
 import { IoSearchOutline } from "react-icons/io5";
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-
+import { IoMdPerson } from "react-icons/io";
 
 
 const Navbar = () => {
  
     const router = useRouter();
     return (
-        <div className='space-y-4 md:pt-6 2xl:pt-10 pt-4 max-w-full bg-color'>
-            <div className="text-white text-2xl font-semibold text-center block lg-hidden md:hidden 2xl:hidden">
-                MovStream
+        <div className='space-y-2 md:pt-6 2xl:pt-10 pt-4 max-w-full bg-color'>
+            <div className="text-white text-2xl font-semibold flex justify-between items-center px-4 lg-hidden md:hidden 2xl:hidden">
+                <p>MovStream </p>
+                <IoMdPerson />
             </div>
             <div className='px-3 space-y-4'>
                 <div className='flex items-center w-full justify-between border-none'>
