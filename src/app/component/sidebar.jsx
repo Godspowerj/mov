@@ -9,7 +9,7 @@ import { AiOutlineAppstore } from "react-icons/ai";
 import { IoSettingsOutline } from "react-icons/io5";
 import { LuCircleHelp } from "react-icons/lu";
 import { MdOutlineLogout } from "react-icons/md";
-import { usePathname} from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 const Sidebar = ({ isOpen }) => {
     const menuitems = [
@@ -57,7 +57,7 @@ const Sidebar = ({ isOpen }) => {
 
     // const [showSearch, setShowSearch] = useState(false);
     // const searchRef = useRef(null);
-    
+
     // useEffect(() => {
     //     function handleClickOutside(event) {
     //         if (searchRef.current && !searchRef.current.contains(event.target)) {
@@ -72,25 +72,47 @@ const Sidebar = ({ isOpen }) => {
 
     return (
 
-        <div className='fixed md:top-0 md:left-0 bg-sidebar h-full  flex items-center justify-center 2xl:justify-start md:w-64 min-h-screen text-base py-2 flex-col '>
-            <div className="text-white text-2xl font-semibold absolute hidden md:flex top-6 2xl:hidden">MovStream</div>
-
-            <ul className="flex flex-col space-y-6 mt-12">
-                {menuitems.map((item, index) => (
-                    <Link key={index} href={item.path}>
-                        <li className={`flex items-center space-x-4 md:px-6 px-5 hover:text-white ${isActive(item.path)}`}>
-                            <span className="text-xl">{item.icons}</span>
-                            <p className={`text-[20px] 2xl:text-2xl hidden md:flex`}>{item.title}</p>
-                        </li>
-                    </Link>
-                ))}
-            </ul>
-
-
-            <div className="absolute bottom-6 pl-5">
-                <button className="text-red-500 text-2xl"><MdOutlineLogout /></button>
-            </div>
+        <div className="fixed md:top-0 md:left-0 bg-sidebar h-full flex flex-col items-center md:justify-center md:w-64 min-h-screen text-base py-2">
+        {/* Sidebar Logo */}
+        <div className="text-white text-2xl font-semibold absolute hidden md:flex top-6 2xl:hidden">
+          MovStream
         </div>
+      
+        {/* Main Sidebar Menu (Always visible on larger screens) */}
+        <ul className="hidden md:flex flex-col space-y-6 mt-12">
+          {menuitems
+            .map((item, index) => (
+              <Link key={index} href={item.path}>
+                <li className={`flex items-center space-x-4 md:px-6 px-5 hover:text-white ${isActive(item.path)}`}>
+                  <span className="text-xl">{item.icons}</span>
+                  <p className="text-[20px] 2xl:text-2xl">{item.title}</p>
+                </li>
+              </Link>
+            ))}
+        </ul>
+      
+        {/* Bottom Navbar (Visible only on smaller screens) */}
+        <div className="fixed bottom-0 left-0 w-full bg-sidebar flex md:hidden justify-around py-3">
+          {menuitems
+            .slice(0, 5) // Show only the first 5 items in the bottom navbar
+            .map((item, index) => (
+              <Link key={index} href={item.path}>
+                <div className="flex flex-col items-center text-white hover:text-gray-300">
+                  <span className="text-xl">{item.icons}</span>
+                </div>
+              </Link>
+            ))}
+        </div>
+      
+        {/* Logout Button (Remains at the bottom in both cases) */}
+        <div className="absolute md:bottom-6 bottom-2 pl-5">
+          <button className="text-red-500 text-2xl">
+            <MdOutlineLogout />
+          </button>
+        </div>
+      </div>
+      
+
 
     );
 };
