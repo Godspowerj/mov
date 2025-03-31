@@ -56,7 +56,7 @@ const MovieProduct = () => {
     return (
         <div className="space-y-10 md:space-y-13 2xl:space-y-20">
             <Section title="Trending ❤️‍🔥" items={movieList} />
-            <Section title="Top Rated❤️‍🔥" items={topRatedList} />
+            <Section title="Top Rated ❤️‍🔥" items={topRatedList} />
             <Section title="Popular TV Shows" items={tvList} />
             <Section title='Upcoming Movies' items={upComingList} />
 
@@ -69,7 +69,7 @@ const MovieProduct = () => {
 const Section = ({ title, items, isTv }) => (
     <div className="w-full space-y-6 xl:space-y-8 2xl:space-y-10">
         <div className="flex justify-between items-center px-4">
-            <p className="text-base md:text-[24px]  2xl:text-5xl text-white font-medium">{title}</p>
+            <p className="text-base md:text-[24px]  2xl:text-5xl text-white font-medium ">{title}</p>
             <p className="flex items-center gap-2 primary-color text-base xl:text-lg 2xl:text-6xl cursor-pointer">
                 more <IoChevronForwardSharp />
             </p>
