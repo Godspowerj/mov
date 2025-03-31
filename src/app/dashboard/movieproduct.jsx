@@ -77,7 +77,7 @@ const Section = ({ title, items }) => (
             </p>
         </div>
         <div className="overflow-x-auto scrollbar-hide">
-            <div className="flex gap-3 w-full md:w-auto">
+            <div className="flex gap-2 w-full md:w-auto">
                 {items.map((item, index) => (
                     <div key={index} className="flex-none flex flex-col items-center gap-2 rounded-lg">
                         <img
