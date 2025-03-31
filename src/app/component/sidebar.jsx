@@ -30,7 +30,7 @@ const Sidebar = ({ isOpen }) => {
         },
         {
             icons: <MdOutlineLocalMovies />,
-            path: "/dashboard/movies",
+            path: "/dashboard/movie",
             title: "Movies"
         },
         {
