@@ -1,5 +1,6 @@
 import {  Outfit} from "next/font/google";
 import "./globals.css";
+import Footer from "./component/footer";
 
 export const metadata = {
   title: 'Movie Website',
