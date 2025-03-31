@@ -15,11 +15,14 @@ const Navbar = () => {
     const router = useRouter();
     return (
         <div className='space-y-4 md:pt-6 2xl:pt-10 pt-4 max-w-full bg-color'>
+            <div className="text-white text-2xl font-semibold text-center block lg-hidden md:hidden 2xl:hidden">
+                MovStream
+            </div>
             <div className='px-3 space-y-4'>
                 <div className='flex items-center w-full justify-between border-none'>
                     {/* Search Bar */}
                     <div className='relative flex items-center w-full bg-transparent  border-gray-700 rounded-lg py-2'>
-                           <div className="w-full max-w-lg bg-gray-800 p-2 rounded-lg flex items-center">
+                        <div className="w-full max-w-lg bg-gray-800 p-2 rounded-lg flex items-center">
                             <IoSearchOutline className="text-[23px] text-white" />
                             <input
                                 type="text"
