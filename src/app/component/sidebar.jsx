@@ -5,7 +5,7 @@ import { IoHomeOutline } from "react-icons/io5";
 import { FaTv } from "react-icons/fa";
 import { IoIosHeadset } from "react-icons/io";
 import { MdOutlineLocalMovies } from "react-icons/md";
-import { AiOutlineAppstore } from "react-icons/ai";
+import { IoMdPerson } from "react-icons/io";
 import { IoSettingsOutline } from "react-icons/io5";
 import { LuCircleHelp } from "react-icons/lu";
 import { MdOutlineLogout } from "react-icons/md";
@@ -34,7 +34,7 @@ const Sidebar = ({ isOpen }) => {
             title: "Movies"
         },
         {
-            icons: <AiOutlineAppstore />,
+            icons: <IoMdPerson />,
             path: "/dashboard/app",
             title: "App"
         },
