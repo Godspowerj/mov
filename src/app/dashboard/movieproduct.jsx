@@ -36,7 +36,7 @@ const MovieProduct = () => {
                     </p>
                 </div>
                 <div className="overflow-x-auto scrollbar-hide">
-                    <div className="flex gap-4 w-full md:w-auto">
+                    <div className="flex gap-3 w-full md:w-auto">
                         {movieList.map((movie, index) => (
                             <div
                                 key={index}
@@ -67,7 +67,7 @@ const MovieProduct = () => {
                     </p>
                 </div>
                 <div className="overflow-x-auto scrollbar-hide">
-                    <div className="flex gap-4 w-full md:w-auto">
+                    <div className="flex gap-3 w-full md:w-auto">
                         {movieList.map((movie, index) => (
                             <div
                                 key={index}
@@ -97,7 +97,7 @@ const MovieProduct = () => {
                     </p>
                 </div>
                 <div className="overflow-x-auto scrollbar-hide">
-                    <div className="flex gap-4 w-full md:w-auto">
+                    <div className="flex gap-3 w-full md:w-auto">
                         {movieList.map((movie, index) => (
                             <div
                                 key={index}
