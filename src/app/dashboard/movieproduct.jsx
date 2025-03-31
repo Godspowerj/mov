@@ -6,15 +6,13 @@ const MovieProduct = () => {
     const [movieList, setMovieList] = useState([]);
     const [tvList, setTvList] = useState([]);
     const [upComingList, setUpComingList] = useState([]);
-    const [topRatedList, setTopRatedList] = useState([]);
-    const apiKey = process.env.NEXT_PUBLIC_MOVIE_API_KEY;
+    // const [topRatedList, setTopRatedList] = useState([]);
     
-    console.log("API Key:", apiKey);
 
     const getMovieProduct = async () => {
         let movies = [];
         for (let i = 1; i <= 2; i++) {
-            const res = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&page=${i}`);
+            const res = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=c0ebac5ff2fd75ab2eb0202a38c61031&page=${i}`);
             const data = await res.json();
             movies = movies.concat(data.results);
         }
@@ -24,7 +22,7 @@ const MovieProduct = () => {
     const getTvProduct = async () => {
         let tvShows = [];
         for (let i = 1; i <= 2; i++) {
-            const res = await fetch(`https://api.themoviedb.org/3/tv/popular?api_key=${apiKey}&page=${i}`);
+            const res = await fetch(`https://api.themoviedb.org/3/tv/popular?api_key=c0ebac5ff2fd75ab2eb0202a38c61031&page=${i}`);
             const data = await res.json();
             tvShows = tvShows.concat(data.results);
         }
@@ -34,7 +32,7 @@ const MovieProduct = () => {
     const getUpcomingProduct = async () => {
         let upComing = [];
         for (let i = 1; i <= 2; i++) {
-            const res = await fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}&page=${i}`);
+            const res = await fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=c0ebac5ff2fd75ab2eb0202a38c61031&page=${i}`);
             const data = await res.json();
             upComing = upComing.concat(data.results);
         }
@@ -44,7 +42,7 @@ const MovieProduct = () => {
     // const getTopRatedProduct = async () => {
     //     let topRated = [];
     //     for (let i = 1; i <= 2; i++) {
-    //         const res = await fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&page=${i}`);
+    //         const res = await fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=c0ebac5ff2fd75ab2eb0202a38c61031&page=${i}`);
     //         const data = await res.json();
     //         topRated = topRated.concat(data.results);
     //     }
