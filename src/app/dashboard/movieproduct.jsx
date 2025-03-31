@@ -60,7 +60,7 @@ const MovieProduct = () => {
             <div className="w-full space-y-6 xl:space-y-8 2xl:space-y-10">
                 <div className="flex justify-between items-center px-4">
                     <p className="text-base md:text-[24px]  2xl:text-5xl text-white font-medium">
-                        Recommended Movies
+                        Trending❤️‍🔥
                     </p>
                     <p className="flex items-center gap-2 primary-color text-base xl:text-lg 2xl:text-6xl cursor-pointer">
                         more <IoChevronForwardSharp />
