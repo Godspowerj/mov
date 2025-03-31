@@ -7,10 +7,7 @@ import { useRouter } from 'next/navigation';
 
 
 const Navbar = () => {
-    // const navbarItems = [
-    //     'Trending', 'Nollywood', 'Western', 
-    // ];
-
+ 
     const router = useRouter();
     return (
         <div className='space-y-4 md:pt-6 2xl:pt-10 pt-4 max-w-full bg-color'>
@@ -35,16 +32,6 @@ const Navbar = () => {
                         </div>
                     </div>
                 </div>
-
-                {/* Movie Categories */}
-                {/* <span className='text-[24px] text-white font-bold'>Movie Categories</span>
-                <div className='overflow-hidden '>
-                    <ul className='flex items-center lg:text-base overflow-x-auto md:gap-10 gap-5 scrollbar-hide py-4 primary-color whitespace-nowrap'>
-                        {navbarItems.map((title, index) => (
-                            <li key={index} className='shrink-0'>{title}</li>
-                        ))}
-                    </ul>
-                </div> */}
             </div>
         </div>
     );

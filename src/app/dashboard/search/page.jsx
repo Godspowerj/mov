@@ -4,7 +4,9 @@ import { useState, useEffect } from 'react';
 
 const Search = () => {
   const [movieList, setMovieList] = useState([]);
-
+  const navbarItems = [
+    'All', 'Series', 'Movies',
+  ];
   const getMovieProduct = () => {
     let movies = []; // Store all movies
 
@@ -25,6 +27,15 @@ const Search = () => {
   return (
     <div className="min-h-screen">
       <div className="">
+       
+        <div className='overflow-hidden '>
+          <ul className='flex items-center lg:text-base overflow-x-auto md:gap-10 gap-5 scrollbar-hide py-4 text-white px-4 whitespace-nowrap'>
+            {navbarItems.map((title, index) => (
+              <li key={index} className='shrink-0'>{title}</li>
+            ))}
+          </ul>
+        </div>
+
         <div className="grid lg:grid-cols-8 grid-cols-3 gap-3 py-3 pt-2 space-y-2 w-full md:w-auto">
           {movieList.map((movie, index) => (
             <div
