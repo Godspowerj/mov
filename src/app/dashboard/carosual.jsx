@@ -12,13 +12,13 @@ const Carosual = () => {
             {/* Popular Playlist */}
             <div>
                 <p className='text-[24px] text-white pl-3 font-medium py-4'>Popular Playlist</p>
-                <div className='flex items-center gap-4 overflow-x-auto scrollbar-hide px-2 2xl:space-x-3'>
+                <div className='flex items-center overflow-x-auto gap-2 scrollbar-hide px-2 2xl:space-x-3'>
                     {images.map((src, index) => (
                         <img
                             key={index}
                             src={src}
                             alt={`Image ${index + 1}`}
-                            className='md:w-32 md:h-32 w-28 h-28 2xl:w-[550px]  2xl:h-[550px] shrink-0'
+                            className='md:w-32 md:h-32 w-20 h-20 2xl:w-[550px]  2xl:h-[550px] shrink-0'
                         />
                     ))}
                 </div>

@@ -83,7 +83,7 @@ const Section = ({ title, items }) => (
                         <img
                             src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
                             alt={`Item ${index}`}
-                            className="w-[100px] h-[150px] lg:w-[150px] lg:h-[200px] 2xl:w-[600px] 2xl:h-[800px] object-cover rounded-lg"
+                            className="w-[200px] h-[150px] lg:w-[150px] lg:h-[200px] 2xl:w-[600px] 2xl:h-[800px] object-cover rounded-lg"
                         />
                         <p className="text-white text-sm md:text-base 2xl:text-5xl">
                             {(item.title || item.name)?.slice(0, 15)}
