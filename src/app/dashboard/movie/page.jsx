@@ -24,7 +24,7 @@ const Movies= () => {
       return (
         <div className="min-h-screen">
           <div className="">
-            <div className="grid lg:grid-cols-8 grid-cols-3 gap-2 w-full md:w-auto">
+            <div className="grid lg:grid-cols-8 grid-cols-3 gap-1 w-full md:w-auto">
               {movieList.map((movie, index) => (
                 <div
                   key={index}
