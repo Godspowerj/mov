@@ -41,27 +41,27 @@ const MovieProduct = () => {
         setUpComingList(upComing);
     };
 
-    const getTopRatedProduct = async () => {
-        let topRated = [];
-        for (let i = 1; i <= 2; i++) {
-            const res = await fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&page=${i}`);
-            const data = await res.json();
-            topRated = topRated.concat(data.results);
-        }
-        setTopRatedList(topRated);
-    };
+    // const getTopRatedProduct = async () => {
+    //     let topRated = [];
+    //     for (let i = 1; i <= 2; i++) {
+    //         const res = await fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&page=${i}`);
+    //         const data = await res.json();
+    //         topRated = topRated.concat(data.results);
+    //     }
+    //     setTopRatedList(topRated);
+    // };
 
     useEffect(() => {
         getMovieProduct();
         getTvProduct();
         getUpcomingProduct();
-        getTopRatedProduct();
+        // getTopRatedProduct();
     }, []);
 
     return (
         <div className="space-y-10 md:space-y-13 2xl:space-y-20">
             <Section title="Trending ❤️‍🔥" items={movieList} />
-            <Section title="Top Rated ❤️‍🔥" items={topRatedList} />
+            {/* <Section title="Top Rated ❤️‍🔥" items={topRatedList} /> */}
             <Section title="Popular TV Shows" items={tvList} />
             <Section title='Upcoming Movies' items={upComingList} />
             <p className='text-gray-500 text-center'>----------- no more content ------------</p>
