@@ -27,7 +27,6 @@ const Search = () => {
   return (
     <div className="min-h-screen">
       <div className="">
-       
         <div className='overflow-hidden '>
           <ul className='flex items-center lg:text-base overflow-x-auto md:gap-10 gap-5 px-4 scrollbar-hide py-4 text-white px- whitespace-nowrap'>
             {navbarItems.map((title, index) => (

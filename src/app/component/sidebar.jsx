@@ -72,7 +72,7 @@ const Sidebar = ({ isOpen }) => {
 
     return (
 
-        <div className="fixed md:top-0 md:left-0 bg-sidebar h-full flex flex-col items-center md:justify-center md:w-64 min-h-screen text-base py-2">
+        <div className="fixed md:top-0 md:left-0 bg-sidebar h-full flex flex-col items-center md:justify-center 2xl:justify-start md:w-64 min-h-screen text-base py-2">
         {/* Sidebar Logo */}
         <div className="text-white text-2xl font-semibold absolute hidden md:flex top-6 2xl:hidden">
           MovStream
