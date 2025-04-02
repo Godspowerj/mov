@@ -79,7 +79,7 @@ const Section = ({ title, items }) => (
         <div className="overflow-x-auto scrollbar-hide">
             <div className="flex gap-2 w-full md:w-auto">
                 {items.map((item, index) => (
-                    <div key={index} className="flex-none flex flex-col items-center gap-1 rounded-lg">
+                    <div key={index} className="flex-none flex  flex-col items-start gap-1 rounded-lg">
                         <img
                             src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
                             alt={`Item ${index}`}
