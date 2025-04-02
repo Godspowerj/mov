@@ -2,16 +2,20 @@ import React from 'react';
 import { IoSearchOutline } from "react-icons/io5";
 import { MdHistory } from "react-icons/md";
 import { useRouter } from 'next/navigation';
+import { MdCancel } from "react-icons/md";
 import { useState } from 'react';
 const Input = () => {
     const router = useRouter();
     const [query, setQuery] = useState('');
     const [searchHistory, setSearchHistory] = useState([]);
+    const [isFocused, setIsFocused] = useState(false);
 
+    const handleFocus = () => {
+        setIsFocused(true);
+    }
 
     const handleSearch = () => {
         if (query.trim() !== '') {
-            alert(`Searching for: ${query}`);
             setSearchHistory((prevHistory) => [query, ...prevHistory]);
             alert(`Searching for: ${query}`);
             setQuery('');
@@ -23,10 +27,10 @@ const Input = () => {
         }
     };
     return (
-        <div className='px-3 space-y-4'>
+        <div className='px-3 '>
             <div className='flex items-center gap-10 w-full justify-between border-none'>
                 {/* Search Bar */}
-                <div className='relative flex items-center w-full bg-transparent  border-gray-700 rounded-lg py-2'>
+                <div className='relative flex items-center w-full bg-transparent  border-gray-700 rounded-lg focus-within:ring focus-within:ring-gray-500 focus-within:border-sm focus-within:border-gray-500'>
                     <div className="w-full max-w-lg bg-gray-800 p-2 rounded-lg flex items-center">
                         <IoSearchOutline className="text-[23px] text-white" />
                         <input
@@ -34,13 +38,22 @@ const Input = () => {
                             value={query}
                             onChange={(e) => setQuery(e.target.value)}
                             placeholder="Search movies..."
-                            className="w-full outline-none border-none bg-transparent text-[18px] text-white pl-2"
+                            className="w-full outline-none border-none bg-transparent text-[18px]  text-white pl-2 "
                             onFocus={() => {
                                 router.prefetch('/dashboard/search');
                                 router.push('/dashboard/search');
+                                handleFocus();
                             }}
                             onKeyDown={handleKeyDown}
                         />
+                        {
+                            query && (
+                                <div className='text-gray-500 cursor-pointer' onClick={() => setQuery('')}>
+                                    <MdCancel />
+                                </div>
+                            )
+                        }
+                        
                     </div>
                 </div>
                 <div className='md:flex items-center gap-2 px-4 hidden rounded-full whitespace-nowrap text-white '>
@@ -48,17 +61,22 @@ const Input = () => {
                     <p>Watch history</p>
                 </div>
             </div>
+              
 
-            {searchHistory.length > 0 && (
-                <div className="bg-gray-700 text-white p-2 rounded-lg mt-4">
-                    <h3>Search History:</h3>
-                    <ul>
-                        {searchHistory.map((search, index) => (
-                            <li key={index} className="py-1">{search}</li>
+            {/* Search History List */}
+            {isFocused && searchHistory.length > 0 && (
+                <div className="">
+                    <p className="text-white font-bold mb-2">Recent Searches:</p>
+                    <ul className='space-x-2'>
+                        {searchHistory.map((item, index) => (
+                            <li key={index} className="text-gray-300 p-1 hover:bg-gray-700 rounded bg-gray-800 inline-block px-3 ">
+                                {item}
+                            </li>
                         ))}
                     </ul>
                 </div>
             )}
+
         </div>
     );
 };
