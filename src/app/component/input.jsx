@@ -17,7 +17,6 @@ const Input = () => {
     const handleSearch = () => {
         if (query.trim() !== '') {
             setSearchHistory((prevHistory) => [query, ...prevHistory]);
-            alert(`Searching for: ${query}`);
             setQuery('');
         }
     };
