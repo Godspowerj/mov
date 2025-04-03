@@ -4,7 +4,6 @@ import MovieProduct from '../movieproduct';
 const MusicPage = () => {
     return (
         <div>
-
             <MovieProduct/>
         </div>
     );

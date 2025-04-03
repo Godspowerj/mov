@@ -8,11 +8,6 @@ const Input = () => {
     const router = useRouter();
     const [query, setQuery] = useState('');
     const [searchHistory, setSearchHistory] = useState([]);
-    const [isFocused, setIsFocused] = useState(false);
-
-    const handleFocus = () => {
-        setIsFocused(true);
-    }
 
     const handleSearch = () => {
         if (query.trim() !== '') {
@@ -41,7 +36,6 @@ const Input = () => {
                             onFocus={() => {
                                 router.prefetch('/dashboard/search');
                                 router.push('/dashboard/search');
-                                handleFocus();
                             }}
                             onKeyDown={handleKeyDown}
                         />
@@ -63,7 +57,7 @@ const Input = () => {
               
 
             {/* Search History List */}
-            {isFocused && searchHistory.length > 0 && (
+            {searchHistory.length > 0 && (
                 <div className="">
                     <p className="text-white font-bold mb-2">Recent Searches:</p>
                     <ul className='space-x-2'>
