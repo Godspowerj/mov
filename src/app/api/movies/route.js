@@ -9,7 +9,7 @@ export async function GET() {
         const [popularMovies, topRatedMovies, popularTVShows, upcomingMovies] = await Promise.all([
             fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&page=1`).then((res) => res.json()),
             fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&page=1`).then((res) => res.json()),
-            fetch(`https://api.themoviedb.org/3/tv/popular?api_key=${apiKey}&page=1`).then((res) => res.json()),
+            fetch(`https://api.themoviedb.org/3/tv/popular?api_key=${apiKey}&page=3`).then((res) => res.json()),
             fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}&page=1`).then((res) => res.json()),
         ]);
  

@@ -62,7 +62,7 @@ const Section = ({ title, items }) => (
                             <p>⭐ {item.vote_average.toFixed(1)}</p>
                         </span>
                         <p className="text-white text-sm md:text-base 2xl:text-5xl">
-                            {(item.title || item.name)?.slice(0, 15)}
+                            {(item.title || item.name)?.slice(0, 17)}
                         </p> 
                         </div>
                         

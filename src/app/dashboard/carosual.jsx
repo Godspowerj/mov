@@ -10,9 +10,13 @@ const Carosual = () => {
     return (
         <>
             {/* Popular Playlist */}
-            <div>
-                <p className='text-[24px] text-white pl-3 font-medium py-4'>Popular Playlist</p>
-                <div className='flex items-center overflow-x-auto gap-2 scrollbar-hide px-2 2xl:space-x-3'>
+            <div className='space-y-4 md:space-y-6 2xl:space-y-10 pt-4'>
+                <div className='md:flex block  items-center justify-between lg:px-3'>
+                    <p className='lg:text-[24px] text-[20px] text-white pl-3 font-medium '>Popular Playlist</p>
+                    <p className='text-gray-400 pl-3 text-base'>All contents are uploaded by users in App</p>
+                </div>
+
+                <div className='flex items-center overflow-x-auto gap-2 scrollbar-hide  2xl:space-x-3'>
                     {images.map((src, index) => (
                         <img
                             key={index}
