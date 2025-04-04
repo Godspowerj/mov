@@ -49,7 +49,7 @@ const Search = () => {
               <p className="text-white text-sm md:text-base 2xl:text-5xl">
                 {movie.title.length > 15 ? `${movie.title.slice(0, 10)}...` : movie.title}
               </p>
-              <div className='text-center text-white 2xl:w-44 mt-4 bg-amber-700 rounded-md py-1'>
+              <div className='text-center text-white 2xl:w-44 mt-4 bg-red-900 rounded-md py-1'>
                 <button className='text-center'>Watch now</button>
               </div>
             </div>

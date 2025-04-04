@@ -51,7 +51,7 @@ const Section = ({ title, items, loading }) => (
             </p>
         </div>
         
-        <div className="overflow-x-auto scrollbar-hide">
+        <div className="overflow-x-auto scrollbar-hide pb-6">
             <div className="flex gap-2 w-full md:w-auto">
                 {loading
                     ? [...Array(20)].map((_, i) => <SkeletonCard key={i} />)
