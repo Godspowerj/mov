@@ -10,6 +10,7 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { LuCircleHelp } from "react-icons/lu";
 import { MdOutlineLogout } from "react-icons/md";
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 
 const Sidebar = ({ isOpen }) => {
     const menuitems = [
@@ -55,29 +56,15 @@ const Sidebar = ({ isOpen }) => {
     };
 
 
-    // const [showSearch, setShowSearch] = useState(false);
-    // const searchRef = useRef(null);
-
-    // useEffect(() => {
-    //     function handleClickOutside(event) {
-    //         if (searchRef.current && !searchRef.current.contains(event.target)) {
-    //             setShowSearch(false);
-    //         }
-    //     }
-    //     document.addEventListener("mousedown", handleClickOutside);
-    //     return () => {
-    //         document.removeEventListener("mousedown", handleClickOutside);
-    //     };
-    // }, []);
 
     return (
 
         <div className="fixed md:top-0 md:left-0 bg-sidebar h-full flex flex-col items-center md:justify-center 2xl:justify-start md:w-64 min-h-screen text-base py-2">
-        {/* Sidebar Logo */}
-        <div className="text-white text-2xl font-semibold absolute hidden md:flex top-6 2xl:hidden">
-          MovStream
+        
+        <div className=" items-center space-x-2 text-white text-2xl md:flex font-semibold absolute hidden top-0 2xl:hidden">
+          <Image src='/lolo.png' width={70} height={70} alt='logo' />
+          <span>MovStream</span>
         </div>
-      
         {/* Main Sidebar Menu (Always visible on larger screens) */}
         <ul className="hidden md:flex flex-col space-y-6 mt-12">
           {menuitems
@@ -91,7 +78,7 @@ const Sidebar = ({ isOpen }) => {
             ))}
         </ul>
       
-        {/* Bottom Navbar (Visible only on smaller screens) */}
+         {/* Bottom Navbar Visible only on smaller screens */}
         <div className="fixed max-md:bottom-0 left-0 w-full bg-sidebar flex md:hidden justify-around py-3">
           {menuitems
             .slice(0, 5) // Show only the first 5 items in the bottom navbar

@@ -15,7 +15,8 @@ const MovieProduct = () => {
             const res = await fetch('/api/movies'); 
             const data = await res.json();
             console.log(data);
-
+            
+            // updates the state variables with the json data
             setMovieList(data.popularMovies);
             setTopRatedList(data.topRatedMovies); 
             setTvList(data.popularTVShows);
