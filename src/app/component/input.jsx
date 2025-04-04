@@ -21,7 +21,7 @@ const Input = () => {
         }
     };
     return (
-        <div className='px-3 '>
+        <div className='px-2 '>
             <div className='flex items-center gap-10 w-full justify-between border-none'>
                 {/* Search Bar */}
                 <div className='relative flex items-center w-full bg-transparent  border-gray-700 rounded-lg focus-within:ring focus-within:ring-gray-500 focus-within:border-sm focus-within:border-gray-500'>

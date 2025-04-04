@@ -12,7 +12,7 @@ const Carosual = () => {
             {/* Popular Playlist */}
             <div className='space-y-4 md:space-y-6 2xl:space-y-10 pt-4'>
                 <div className='md:flex block  items-center justify-between lg:px-3'>
-                    <p className='lg:text-[24px] text-[20px] text-white pl-3 font-medium '>Popular Playlist</p>
+                    <p className='lg:text-[24px] text-[20px] text-white pl-3 font-bold '>Popular Playlist</p>
                     <p className='text-gray-400 pl-3 lg:text-base text-sm'>All contents are uploaded by users in App</p>
                 </div>
 
