@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
             <div className="flex flex-col flex-1 overflow-y-auto bg-color scrollbar-hide ml-0 md:ml-64">
                 <Navbar />
                 {children}
-                
+                <Footer />
             </div>
         </div >
     );

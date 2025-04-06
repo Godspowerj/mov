@@ -28,7 +28,7 @@ const Input = () => {
                     <div className="w-full max-w-lg bg-gray-800 p-2 rounded-lg flex items-center">
                         <IoSearchOutline className="text-[23px] text-white" />
                         <input
-                            type="text"
+                            type="text"  
                             value={query}
                             onChange={(e) => setQuery(e.target.value)}
                             placeholder="Search movies..."
@@ -58,14 +58,22 @@ const Input = () => {
 
             {/* Search History List */}
             {searchHistory.length > 0 && (
-                <div className="">
+                <div className="py-3">
                     <p className="text-white font-bold mb-2">Recent Searches:</p>
-                    <ul className='space-x-2'>
-                        {searchHistory.map((item, index) => (
-                            <li key={index} className="text-gray-300 p-1 hover:bg-gray-700 rounded bg-gray-800 inline-block px-3 ">
+                    <ul className=' flex items-center justify-between'>
+                        <div className='space-x-3 text-center'>
+                          {searchHistory.map((item, index) => (
+                            <li key={index} className=" inline-flex gap-2 text-sm text-center  items-center text-gray-300 p-1 hover:bg-gray-700 rounded-full bg-gray-800  px-3 ">
                                 {item}
+                                <p className='text-sm' onClick={() => setQuery('')}><MdCancel /></p>
                             </li>
-                        ))}
+                            
+                        ))}  
+                        </div>
+                        
+                        <div>
+                            <button className='text-red-500' onClick={() => setSearchHistory([])}>Clear All</button>
+                        </div>
                     </ul>
                 </div>
             )}

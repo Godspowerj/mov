@@ -16,7 +16,9 @@ const outfit = Outfit({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-
+        <head>
+         <link rel="icon" href="/lolo.png" />
+      </head>
       <body
         className={`${outfit.variable} antialiased `}
       >
