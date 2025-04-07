@@ -8,7 +8,7 @@ const Footer = () => {
       <p>All rights reserved.</p>
       </div>
      
-      <p>All contents are uploaded by users. Moviebox only provides webpage services and does not store, record, or upload any content. If you find any content infringe on your rights, please contact us by " Report content "</p>
+      <p>All contents are uploaded by users. MovStream only provides webpage services and does not store, record, or upload any content. If you find any content infringe on your rights, please contact us by " Report content "</p>
     </div>
   )
 }

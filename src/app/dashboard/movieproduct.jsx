@@ -32,7 +32,7 @@ const MovieProduct = () => {
     }, []);
 
     return (
-        <div className="space-y-10 md:space-y-13 2xl:space-y-20">
+        <div className="md:space-y-12 2xl:space-y-20">
             <Section title="Trending ❤️‍🔥" items={movieList} loading={loading} />
             <Section title="Top Rated ❤️‍🔥" items={topRatedList} loading={loading} />
             <Section title="Popular TV Shows" items={tvList} loading={loading} />
@@ -43,11 +43,11 @@ const MovieProduct = () => {
 
 // Section Component
 const Section = ({ title, items, loading }) => (
-    <div className="w-full space-y-6 xl:space-y-8 2xl:space-y-10">
+    <div className="w-full space-y-5 xl:space-y-8 2xl:space-y-10">
         <div className="flex justify-between items-center px-4">
             <p className="text-base md:text-[24px] 2xl:text-5xl text-white font-bold">{title}</p>
-            <p className="flex items-center gap-2 primary-color text-base xl:text-lg 2xl:text-6xl cursor-pointer">
-                more <IoChevronForwardSharp />
+            <p className="flex items-center gap-2 primary-color text-base xl:text-lg 2xl:text-6xl cursor-pointer ">
+                More <IoChevronForwardSharp />
             </p>
         </div>
         

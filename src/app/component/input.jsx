@@ -1,9 +1,9 @@
-import React from 'react';
+
 import { IoSearchOutline } from "react-icons/io5";
 import { MdHistory } from "react-icons/md";
 import { useRouter } from 'next/navigation';
 import { MdCancel } from "react-icons/md";
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 const Input = () => {
     const router = useRouter();
     const [query, setQuery] = useState('');
@@ -11,10 +11,16 @@ const Input = () => {
 
     const handleSearch = () => {
         if (query.trim() !== '') {
-            setSearchHistory((prevHistory) => [query, ...prevHistory]);
-            setQuery('');
+            const updatedHistory = [query, ...searchHistory]; // Add the new search term
+            setSearchHistory(updatedHistory); // Update the state
+            localStorage.setItem('searchHistory', JSON.stringify(updatedHistory)); // Save to localStorage
+            setQuery(''); // Clear the input field
         }
-    };
+    }; useEffect(() => {
+        const savedHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+        setSearchHistory(savedHistory); // Load saved history into state
+    }, []);
+
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
             handleSearch();
@@ -81,7 +87,10 @@ const Input = () => {
                         </div>
 
                         <div>
-                            <button className='text-red-500' onClick={() => setSearchHistory([])}>Clear All</button>
+                            <button className='text-red-500' onClick={() => {
+                                setSearchHistory([]);
+                                localStorage.removeItem('searchHistory');
+                            }}>Clear All</button>
                         </div>
                     </ul>
                 </div>
