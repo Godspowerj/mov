@@ -27,6 +27,6 @@ export async function GET() {
         // By combining all the data into one object, the frontend only needs to make one request to /api/movies and gets all the data it needs in a single response.
     } catch (error) {
         console.error('Error fetching data:', error);        
-        return NextResponse.json(responseData);
+        return NextResponse.json({ error: 'Failed to fetch data' }, { status: 500 });
     }
 }
