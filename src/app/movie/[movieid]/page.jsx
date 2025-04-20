@@ -8,6 +8,7 @@ import React from 'react'
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoChevronForwardSharp } from "react-icons/io5";
 import { RiMovie2Line } from "react-icons/ri";
+import Movies from '@/app/dashboard/movies/page';
 
 
 const Moviepage = async ({ params }) => {
@@ -27,6 +28,7 @@ const Moviepage = async ({ params }) => {
 
     return (
       <>
+      <Sidebar />
         <div className='bg-color min-h-screen'>
           <div className='flex bg-color  items-center justify-between fixed left-0 right-0 top-0 z-50 shadow-2xl  px-4 '>
             <div className="flex items-center space-x-2 text-white text-2xl md:flex font-semibold">
@@ -63,41 +65,30 @@ const Moviepage = async ({ params }) => {
                   </button>
                 </div>
               </div>
-
-              <div className='flex-start justify-center items-center text-white md:w-[25rem] md:h-[25rem] md:bg-black bg-opacity-50'>
-                <div className='flex items-center text-center '>
-                  <h1 className="text-2xl font-bold">{data.title}</h1>
-                  <IoChevronForwardSharp className='text-gray-400' />
-                </div>
-                {data.genres.map((genre) => (
-                  <span key={genre.id} className="text-gray-300 text-[12px] space-x-2">
-                    {genre.name},
-                  </span>
-                ))}
-                <span className='flex items-center text-gray-300 text-[14px] '>
-                  <RiMovie2Line />|
-                  {data.release_date || data.first_air_date} |
-                  <p>⭐ {data.vote_average.toFixed(1)}</p>
-                </span>
-
-
-                <h1>Resources</h1>
-              </div>
-
-
-
             </div>
-            <div className='py-10'>
 
-              <p>{data.release_data}</p>
-              <p className="text-gray-700">{data.overview}</p>
+            <div className='py-10'>
+              <div className='flex items-center text-center '>
+                <h1 className="text-2xl font-bold text-white">{data.title}</h1>
+                <IoChevronForwardSharp className='text-gray-400' />
+              </div>
+              {data.genres.map((genre) => (
+                <span key={genre.id} className="text-gray-300 text-[12px] space-x-2">
+                  {genre.name},
+                </span>
+              ))}
+              <span className='flex items-center text-gray-300 text-[14px] '>
+                <RiMovie2Line />|
+                {data.release_date || data.first_air_date} |
+                <p>⭐ {data.vote_average.toFixed(1)}</p>
+              </span>
+              <p className="text-gray-700 hidden">{data.overview}</p>
             </div>
           </div>
-
-
-
+          <Movies/>
+          <Footer />
         </div>
-
+      
       </>
     )
 
