@@ -30,18 +30,18 @@ const Moviepage = async ({ params }) => {
       <>
         <Sidebar />
         <div className='bg-color min-h-screen'>
-          <div className='flex bg-color  items-center justify-between fixed left-0 right-0 top-0 z-50 shadow-2xl  px-3 '>
+          <div className='flex bg-color  items-center justify-between fixed left-0 right-0 top-0 z-50 shadow-2xl py-3'>
             <div className="flex items-center space-x-2 text-white text-2xl md:flex font-semibold">
-              <RxHamburgerMenu className='text-white text-3xl' />
-              <Image src='/lolo.png' width={70} height={70} alt='logo' />
+              <RxHamburgerMenu className='text-white text-2xl md:flex hidden' />
+              <Image src='/lolo.png' width={40} height={40} alt='logo' />
               <span>MovStream</span>
             </div>
           </div>
 
-          <div className=' md:px-20 md:pt-20 mx-auto'>
+          <div className=' md:px-20 md:pt-20 pt-15  mx-auto'>
             <div className="relative mx-auto  md:flex block justify-center items-center h-full">
               <div>
-                <div className='text-white'>
+                <div className='text-white py-4'>
                   <h1 className=''>Movie Details</h1>
                 </div>
 
@@ -67,7 +67,7 @@ const Moviepage = async ({ params }) => {
               </div>
             </div>
 
-            <div className='py-10 px-3'>
+            <div className='py-4 '>
               <div className='flex items-center text-center '>
                 <h1 className="text-2xl font-bold text-white">{data.title}</h1>
                 <IoChevronForwardSharp className='text-gray-400' />
