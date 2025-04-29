@@ -39,9 +39,11 @@ const Movies = () => {
                   <img
                   src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                   alt={`Movie ${index}`}
-                  className="w-[150px] h-[150px] lg:w-[150px] lg:h-[200px] 2xl:w-[600px] 2xl:h-[800px] object-cover rounded-lg"
+                  className="relative w-[150px] h-[150px] lg:w-[150px] lg:h-[200px] 2xl:w-[600px] 2xl:h-[800px] object-cover rounded-lg"
                 />
+                <p className=''>{movie.vote_average.toFixed(1)}</p>
                 <p className="text-white text-sm md:text-base 2xl:text-5xl">
+
                   {movie.title.length > 15 ? `${movie.title.slice(0, 10)}...` : movie.title}
                 </p>
                 </Link>

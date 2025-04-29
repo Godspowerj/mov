@@ -42,7 +42,7 @@ const Moviepage = async ({ params }) => {
             <div className="relative mx-auto  md:flex block justify-center items-center h-full">
               <div>
                 <div className='text-white py-4'>
-                  <h1 className=''>Movie Details</h1>
+                  <h1 className=''>Home/{data.title}</h1>
                 </div>
 
                 <img
