@@ -62,18 +62,18 @@ const Section = ({ title, items = [], loading }) => {
                         : items.map((item, index) => (
 
                             <div key={index} className="flex-none flex flex-col bg-gray-900 items-start gap-1 rounded-lg">
-                                <Link href={`/movie/${item.id}`} className="flex flex-col items-start gap-1">
+                                <Link href={`/movie/${item.id}`} className="flex flex-col items-start">
                                     <img
                                         src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
                                         alt={`Item ${index}`}
-                                        className="w-[150px] h-[200px] lg:w-[150px] lg:h-[200px] 2xl:w-[600px] 2xl:h-[800px] object-cover rounded-lg" />
+                                        className="w-[100px] h-[150px] lg:w-[150px] lg:h-[200px] 2xl:w-[600px] 2xl:h-[800px] object-cover rounded-lg" />
                                     <div className='flex flex-col gap-1 px-2 py-1'>
                                         <span className='text-gray-300 text-[12px]'>
                                             {item.release_date || item.first_air_date}
                                             <p>⭐ {item.vote_average.toFixed(1)}</p>
                                         </span>
                                         <p className="text-white text-sm md:text-base 2xl:text-5xl">
-                                            {(item.title || item.name)?.slice(0, 17)}
+                                            {(item.title || item.name)?.slice(0, 10) + '...'}
                                         </p>
                                     </div>
 
