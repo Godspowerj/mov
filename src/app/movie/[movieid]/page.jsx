@@ -13,7 +13,7 @@ import Movies from '@/app/dashboard/movies/page';
 
 const Moviepage = async ({ params }) => {
 
-  const { movieid } = params;
+  const { movieid } = await params;
   console.log(movieid);
 
   try {
