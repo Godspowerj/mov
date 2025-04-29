@@ -66,7 +66,7 @@ const Section = ({ title, items = [], loading }) => {
                                     <img
                                         src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
                                         alt={`Item ${index}`}
-                                        className="w-[200px] h-[150px] lg:w-[150px] lg:h-[200px] 2xl:w-[600px] 2xl:h-[800px] object-cover rounded-lg" />
+                                        className="w-[150px] h-[200px] lg:w-[150px] lg:h-[200px] 2xl:w-[600px] 2xl:h-[800px] object-cover rounded-lg" />
                                     <div className='flex flex-col gap-1 px-2 py-1'>
                                         <span className='text-gray-300 text-[12px]'>
                                             {item.release_date || item.first_air_date}
